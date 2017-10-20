@@ -47,13 +47,16 @@ object ReductionApp {
 
     // count
     val numRows = df.count
-    println(s"Number of Rows: ${numRows}")
+    println(s"Total Number of Rows/Events: ${numRows}")
+
+    // start
+
 
     // save as parquet
     val output = options.get("output") match {
       case Some(x) => x
       case None => "file:/tmp/tmpparquet"
     }
-    df.select(requiredColumns.head, requiredColumns.tail:_*).write.parquet(output)
+    //df.select(requiredColumns.head, requiredColumns.tail:_*).write.parquet(output)
   }
 }
