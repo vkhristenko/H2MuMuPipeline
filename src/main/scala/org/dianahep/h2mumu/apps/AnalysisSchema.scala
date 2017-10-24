@@ -1,18 +1,18 @@
-package org.dianahep.h2mumu.apps.reduction
+package org.dianahep.h2mumu.apps.analysis
 
-case class Record4 (
+case class Record3 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record3 (
-    fCoordinates : Record4
+case class Record2 (
+    fCoordinates : Record3
 )
 
 
-case class Record6 (
+case class Record5 (
     fPt : Float,
     fEta : Float,
     fPhi : Float,
@@ -20,89 +20,94 @@ case class Record6 (
 )
 
 
-case class Record5 (
-    fCoordinates : Record6
+case class Record4 (
+    fCoordinates : Record5
 )
 
 
-case class Record2 (
-    vertex_ : Record3,
-    p4Polar_ : Record5,
+case class Record1 (
+    vertex_ : Record2,
+    p4Polar_ : Record4,
     qx3_ : Int,
     pdgId_ : Int,
     status_ : Int
 )
 
 
-case class Record8 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
 case class Record7 (
-    patMuons_slimmedMuons__RECO_obj_innerTrack__product_ : Record8
-)
-
-
-case class Record10 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
+)
+
+
+case class Record6 (
+    patMuons_slimmedMuons__RECO_obj_innerTrack__product_ : Record7
 )
 
 
 case class Record9 (
-    patMuons_slimmedMuons__RECO_obj_outerTrack__product_ : Record10
-)
-
-
-case class Record12 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
+)
+
+
+case class Record8 (
+    patMuons_slimmedMuons__RECO_obj_outerTrack__product_ : Record9
 )
 
 
 case class Record11 (
-    patMuons_slimmedMuons__RECO_obj_globalTrack__product_ : Record12
-)
-
-
-case class Record14 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record13 (
-    product_ : Record14
+case class Record10 (
+    patMuons_slimmedMuons__RECO_obj_globalTrack__product_ : Record11
 )
 
 
-case class Record17 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record13 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record12 (
+    product_ : Record13
 )
 
 
 case class Record16 (
-    fCoordinates : Record17
-)
-
-
-case class Record19 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
+case class Record15 (
+    fCoordinates : Record16
+)
+
+
 case class Record18 (
-    fCoordinates : Record19
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record17 (
+    fCoordinates : Record18
+)
+
+
+case class Record19 (
+    id_ : Int
 )
 
 
@@ -111,12 +116,7 @@ case class Record20 (
 )
 
 
-case class Record21 (
-    id_ : Int
-)
-
-
-case class Record15 (
+case class Record14 (
     tower : Float,
     towerS9 : Float,
     em : Float,
@@ -132,38 +132,38 @@ case class Record15 (
     ecal_timeError : Float,
     hcal_time : Float,
     hcal_timeError : Float,
-    ecal_position : Record16,
-    hcal_position : Record18,
-    ecal_id : Record20,
-    hcal_id : Record21
-)
-
-
-case class Record24 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
+    ecal_position : Record15,
+    hcal_position : Record17,
+    ecal_id : Record19,
+    hcal_id : Record20
 )
 
 
 case class Record23 (
-    fCoordinates : Record24
-)
-
-
-case class Record26 (
     fX : Double,
     fY : Double,
     fZ : Double
 )
 
 
-case class Record25 (
-    fCoordinates : Record26
+case class Record22 (
+    fCoordinates : Record23
 )
 
 
-case class Record22 (
+case class Record25 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record24 (
+    fCoordinates : Record25
+)
+
+
+case class Record21 (
     updatedSta : Boolean,
     trkKink : Float,
     glbKink : Float,
@@ -175,60 +175,128 @@ case class Record22 (
     globalDeltaEtaPhi : Float,
     tightMatch : Boolean,
     glbTrackProbability : Float,
-    tkKink_position : Record23,
-    glbKink_position : Record25
-)
-
-
-case class Record30 (
-    processIndex_ : Short,
-    productIndex_ : Short
+    tkKink_position : Record22,
+    glbKink_position : Record24
 )
 
 
 case class Record29 (
-    product_ : Record30,
-    index_ : Int
+    processIndex_ : Short,
+    productIndex_ : Short
 )
 
 
-case class Record32 (
-    processIndex_ : Short,
-    productIndex_ : Short
+case class Record28 (
+    product_ : Record29,
+    index_ : Int
 )
 
 
 case class Record31 (
-    product_ : Record32,
-    index_ : Int
-)
-
-
-case class Record34 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
+case class Record30 (
+    product_ : Record31,
+    index_ : Int
+)
+
+
 case class Record33 (
-    product_ : Record34,
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record32 (
+    product_ : Record33,
+    index_ : Int
+)
+
+
+case class Record35 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record34 (
+    product_ : Record35,
+    index_ : Int
+)
+
+
+case class Record27 (
+    x : Float,
+    y : Float,
+    xErr : Float,
+    yErr : Float,
+    dXdZ : Float,
+    dYdZ : Float,
+    dXdZErr : Float,
+    dYdZErr : Float,
+    mask : Int,
+    hasZed_ : Boolean,
+    hasPhi_ : Boolean,
+    t0 : Float,
+    dtSegmentRef : Record28,
+    cscSegmentRef : Record30,
+    gemSegmentRef : Record32,
+    me0SegmentRef : Record34
+)
+
+
+case class Record38 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record37 (
+    product_ : Record38,
+    index_ : Int
+)
+
+
+case class Record40 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record39 (
+    product_ : Record40,
+    index_ : Int
+)
+
+
+case class Record42 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record41 (
+    product_ : Record42,
+    index_ : Int
+)
+
+
+case class Record44 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record43 (
+    product_ : Record44,
     index_ : Int
 )
 
 
 case class Record36 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record35 (
-    product_ : Record36,
-    index_ : Int
-)
-
-
-case class Record28 (
     x : Float,
     y : Float,
     xErr : Float,
@@ -241,62 +309,62 @@ case class Record28 (
     hasZed_ : Boolean,
     hasPhi_ : Boolean,
     t0 : Float,
-    dtSegmentRef : Record29,
-    cscSegmentRef : Record31,
-    gemSegmentRef : Record33,
-    me0SegmentRef : Record35
+    dtSegmentRef : Record37,
+    cscSegmentRef : Record39,
+    gemSegmentRef : Record41,
+    me0SegmentRef : Record43
 )
 
 
-case class Record39 (
+case class Record47 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record38 (
-    product_ : Record39,
+case class Record46 (
+    product_ : Record47,
     index_ : Int
 )
 
 
-case class Record41 (
+case class Record49 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record40 (
-    product_ : Record41,
+case class Record48 (
+    product_ : Record49,
     index_ : Int
 )
 
 
-case class Record43 (
+case class Record51 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record42 (
-    product_ : Record43,
+case class Record50 (
+    product_ : Record51,
+    index_ : Int
+)
+
+
+case class Record53 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record52 (
+    product_ : Record53,
     index_ : Int
 )
 
 
 case class Record45 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record44 (
-    product_ : Record45,
-    index_ : Int
-)
-
-
-case class Record37 (
     x : Float,
     y : Float,
     xErr : Float,
@@ -309,62 +377,62 @@ case class Record37 (
     hasZed_ : Boolean,
     hasPhi_ : Boolean,
     t0 : Float,
-    dtSegmentRef : Record38,
-    cscSegmentRef : Record40,
-    gemSegmentRef : Record42,
-    me0SegmentRef : Record44
+    dtSegmentRef : Record46,
+    cscSegmentRef : Record48,
+    gemSegmentRef : Record50,
+    me0SegmentRef : Record52
 )
 
 
-case class Record48 (
+case class Record56 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record47 (
-    product_ : Record48,
+case class Record55 (
+    product_ : Record56,
     index_ : Int
 )
 
 
-case class Record50 (
+case class Record58 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record49 (
-    product_ : Record50,
+case class Record57 (
+    product_ : Record58,
     index_ : Int
 )
 
 
-case class Record52 (
+case class Record60 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record51 (
-    product_ : Record52,
+case class Record59 (
+    product_ : Record60,
+    index_ : Int
+)
+
+
+case class Record62 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record61 (
+    product_ : Record62,
     index_ : Int
 )
 
 
 case class Record54 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record53 (
-    product_ : Record54,
-    index_ : Int
-)
-
-
-case class Record46 (
     x : Float,
     y : Float,
     xErr : Float,
@@ -377,99 +445,31 @@ case class Record46 (
     hasZed_ : Boolean,
     hasPhi_ : Boolean,
     t0 : Float,
-    dtSegmentRef : Record47,
-    cscSegmentRef : Record49,
-    gemSegmentRef : Record51,
-    me0SegmentRef : Record53
-)
-
-
-case class Record57 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record56 (
-    product_ : Record57,
-    index_ : Int
-)
-
-
-case class Record59 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record58 (
-    product_ : Record59,
-    index_ : Int
-)
-
-
-case class Record61 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record60 (
-    product_ : Record61,
-    index_ : Int
+    dtSegmentRef : Record55,
+    cscSegmentRef : Record57,
+    gemSegmentRef : Record59,
+    me0SegmentRef : Record61
 )
 
 
 case class Record63 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record62 (
-    product_ : Record63,
-    index_ : Int
-)
-
-
-case class Record55 (
-    x : Float,
-    y : Float,
-    xErr : Float,
-    yErr : Float,
-    dXdZ : Float,
-    dYdZ : Float,
-    dXdZErr : Float,
-    dYdZErr : Float,
-    mask : Int,
-    hasZed_ : Boolean,
-    hasPhi_ : Boolean,
-    t0 : Float,
-    dtSegmentRef : Record56,
-    cscSegmentRef : Record58,
-    gemSegmentRef : Record60,
-    me0SegmentRef : Record62
-)
-
-
-case class Record64 (
     x : Float,
     mask : Int,
     bx : Int
 )
 
 
-case class Record65 (
+case class Record64 (
     id_ : Int
 )
 
 
-case class Record27 (
-    segmentMatches : Seq[Record28],
-    gemMatches : Seq[Record37],
-    me0Matches : Seq[Record46],
-    truthMatches : Seq[Record55],
-    rpcMatches : Seq[Record64],
+case class Record26 (
+    segmentMatches : Seq[Record27],
+    gemMatches : Seq[Record36],
+    me0Matches : Seq[Record45],
+    truthMatches : Seq[Record54],
+    rpcMatches : Seq[Record63],
     edgeX : Float,
     edgeY : Float,
     x : Float,
@@ -480,7 +480,16 @@ case class Record27 (
     dYdZ : Float,
     dXdZErr : Float,
     dYdZErr : Float,
-    id : Record65
+    id : Record64
+)
+
+
+case class Record65 (
+    nDof : Int,
+    timeAtIpInOut : Float,
+    timeAtIpInOutErr : Float,
+    timeAtIpOutIn : Float,
+    timeAtIpOutInErr : Float
 )
 
 
@@ -494,11 +503,16 @@ case class Record66 (
 
 
 case class Record67 (
-    nDof : Int,
-    timeAtIpInOut : Float,
-    timeAtIpInOutErr : Float,
-    timeAtIpOutIn : Float,
-    timeAtIpOutInErr : Float
+    sumPt : Float,
+    emEt : Float,
+    hadEt : Float,
+    hoEt : Float,
+    nTracks : Int,
+    nJets : Int,
+    trackerVetoPt : Float,
+    emVetoEt : Float,
+    hadVetoEt : Float,
+    hoVetoEt : Float
 )
 
 
@@ -517,16 +531,13 @@ case class Record68 (
 
 
 case class Record69 (
-    sumPt : Float,
-    emEt : Float,
-    hadEt : Float,
-    hoEt : Float,
-    nTracks : Int,
-    nJets : Int,
-    trackerVetoPt : Float,
-    emVetoEt : Float,
-    hadVetoEt : Float,
-    hoVetoEt : Float
+    sumChargedHadronPt : Float,
+    sumChargedParticlePt : Float,
+    sumNeutralHadronEt : Float,
+    sumPhotonEt : Float,
+    sumNeutralHadronEtHighThreshold : Float,
+    sumPhotonEtHighThreshold : Float,
+    sumPUPt : Float
 )
 
 
@@ -585,18 +596,7 @@ case class Record74 (
 )
 
 
-case class Record75 (
-    sumChargedHadronPt : Float,
-    sumChargedParticlePt : Float,
-    sumNeutralHadronEt : Float,
-    sumPhotonEt : Float,
-    sumNeutralHadronEtHighThreshold : Float,
-    sumPhotonEtHighThreshold : Float,
-    sumPUPt : Float
-)
-
-
-case class Record77 (
+case class Record76 (
     fX : Double,
     fY : Double,
     fZ : Double,
@@ -604,59 +604,59 @@ case class Record77 (
 )
 
 
-case class Record76 (
-    fCoordinates : Record77
-)
-
-
-case class Record79 (
-    processIndex_ : Short,
-    productIndex_ : Short
+case class Record75 (
+    fCoordinates : Record76
 )
 
 
 case class Record78 (
-    patMuons_slimmedMuons__RECO_obj_refToOrig__core_ : Record79,
-    key_ : Long
+    processIndex_ : Short,
+    productIndex_ : Short
 )
 
 
-case class Record82 (
-    processIndex_ : Short,
-    productIndex_ : Short
+case class Record77 (
+    patMuons_slimmedMuons__RECO_obj_refToOrig__core_ : Record78,
+    key_ : Long
 )
 
 
 case class Record81 (
-    core_ : Record82,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record80 (
-    edm__PtrVectorBase : Record81
-)
-
-
-case class Record84 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
+case class Record80 (
+    core_ : Record81,
+    indicies_ : Seq[Long]
+)
+
+
+case class Record79 (
+    edm__PtrVectorBase : Record80
+)
+
+
 case class Record83 (
-    core_ : Record84,
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record82 (
+    core_ : Record83,
     key_ : Long
 )
 
 
-case class Record85 (
+case class Record84 (
     first : Int,
     second : Int
 )
 
 
-case class Record86 (
+case class Record85 (
     chiso_ : Float,
     nhiso_ : Float,
     phiso_ : Float,
@@ -664,7 +664,7 @@ case class Record86 (
 )
 
 
-case class Record89 (
+case class Record88 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -673,282 +673,211 @@ case class Record89 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
-)
-
-
-case class Record91 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
 )
 
 
 case class Record90 (
-    fCoordinates : Record91
-)
-
-
-case class Record93 (
     fX : Float,
     fY : Float,
     fZ : Float
+)
+
+
+case class Record89 (
+    fCoordinates : Record90
 )
 
 
 case class Record92 (
-    fCoordinates : Record93
+    fX : Float,
+    fY : Float,
+    fZ : Float
 )
 
 
-case class Record88 (
-    hitPattern_ : Record89,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record90,
-    momentum_ : Record92,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
-)
-
-
-case class Record95 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record94 (
-    product_ : Record95
+case class Record91 (
+    fCoordinates : Record92
 )
 
 
 case class Record87 (
-    reco__TrackBase : Record88,
-    extra_ : Record94
+    hitPattern_ : Record88,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record89,
+    momentum_ : Record91,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
 )
 
 
-case class Record98 (
-    hitPattern : Seq[Short],
-    hitCount : Byte,
-    beginTrackHits : Byte,
-    endTrackHits : Byte,
-    beginInner : Byte,
-    endInner : Byte,
-    beginOuter : Byte,
-    endOuter : Byte
+case class Record94 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
 )
 
 
-case class Record100 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record93 (
+    product_ : Record94
 )
 
 
-case class Record99 (
-    fCoordinates : Record100
-)
-
-
-case class Record102 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record101 (
-    fCoordinates : Record102
+case class Record86 (
+    reco__TrackBase : Record87,
+    extra_ : Record93
 )
 
 
 case class Record97 (
-    hitPattern_ : Record98,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record99,
-    momentum_ : Record101,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
+    hitPattern : Seq[Short],
+    hitCount : Byte,
+    beginTrackHits : Byte,
+    endTrackHits : Byte,
+    beginInner : Byte,
+    endInner : Byte,
+    beginOuter : Byte,
+    endOuter : Byte
 )
 
 
-case class Record104 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
+case class Record99 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
 )
 
 
-case class Record103 (
-    product_ : Record104
+case class Record98 (
+    fCoordinates : Record99
+)
+
+
+case class Record101 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record100 (
+    fCoordinates : Record101
 )
 
 
 case class Record96 (
-    reco__TrackBase : Record97,
-    extra_ : Record103
+    hitPattern_ : Record97,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record98,
+    momentum_ : Record100,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
 )
 
 
-case class Record107 (
-    hitPattern : Seq[Short],
-    hitCount : Byte,
-    beginTrackHits : Byte,
-    endTrackHits : Byte,
-    beginInner : Byte,
-    endInner : Byte,
-    beginOuter : Byte,
-    endOuter : Byte
+case class Record103 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
 )
 
 
-case class Record109 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record102 (
+    product_ : Record103
 )
 
 
-case class Record108 (
-    fCoordinates : Record109
-)
-
-
-case class Record111 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record110 (
-    fCoordinates : Record111
+case class Record95 (
+    reco__TrackBase : Record96,
+    extra_ : Record102
 )
 
 
 case class Record106 (
-    hitPattern_ : Record107,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record108,
-    momentum_ : Record110,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
+    hitPattern : Seq[Short],
+    hitCount : Byte,
+    beginTrackHits : Byte,
+    endTrackHits : Byte,
+    beginInner : Byte,
+    endInner : Byte,
+    beginOuter : Byte,
+    endOuter : Byte
 )
 
 
-case class Record113 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
+case class Record108 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
 )
 
 
-case class Record112 (
-    product_ : Record113
+case class Record107 (
+    fCoordinates : Record108
+)
+
+
+case class Record110 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record109 (
+    fCoordinates : Record110
 )
 
 
 case class Record105 (
-    reco__TrackBase : Record106,
-    extra_ : Record112
+    hitPattern_ : Record106,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record107,
+    momentum_ : Record109,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
 )
 
 
-case class Record116 (
-    hitPattern : Seq[Short],
-    hitCount : Byte,
-    beginTrackHits : Byte,
-    endTrackHits : Byte,
-    beginInner : Byte,
-    endInner : Byte,
-    beginOuter : Byte,
-    endOuter : Byte
+case class Record112 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
 )
 
 
-case class Record118 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record111 (
+    product_ : Record112
 )
 
 
-case class Record117 (
-    fCoordinates : Record118
-)
-
-
-case class Record120 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record119 (
-    fCoordinates : Record120
+case class Record104 (
+    reco__TrackBase : Record105,
+    extra_ : Record111
 )
 
 
 case class Record115 (
-    hitPattern_ : Record116,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record117,
-    momentum_ : Record119,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
-)
-
-
-case class Record122 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record121 (
-    product_ : Record122
-)
-
-
-case class Record114 (
-    reco__TrackBase : Record115,
-    extra_ : Record121
-)
-
-
-case class Record125 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -960,36 +889,36 @@ case class Record125 (
 )
 
 
-case class Record127 (
+case class Record117 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record126 (
-    fCoordinates : Record127
+case class Record116 (
+    fCoordinates : Record117
 )
 
 
-case class Record129 (
+case class Record119 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record128 (
-    fCoordinates : Record129
+case class Record118 (
+    fCoordinates : Record119
 )
 
 
-case class Record124 (
-    hitPattern_ : Record125,
+case class Record114 (
+    hitPattern_ : Record115,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record126,
-    momentum_ : Record128,
+    vertex_ : Record116,
+    momentum_ : Record118,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -1001,21 +930,99 @@ case class Record124 (
 )
 
 
-case class Record131 (
+case class Record121 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record130 (
-    product_ : Record131
+case class Record120 (
+    product_ : Record121
+)
+
+
+case class Record113 (
+    reco__TrackBase : Record114,
+    extra_ : Record120
+)
+
+
+case class Record124 (
+    hitPattern : Seq[Short],
+    hitCount : Byte,
+    beginTrackHits : Byte,
+    endTrackHits : Byte,
+    beginInner : Byte,
+    endInner : Byte,
+    beginOuter : Byte,
+    endOuter : Byte
+)
+
+
+case class Record126 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record125 (
+    fCoordinates : Record126
+)
+
+
+case class Record128 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record127 (
+    fCoordinates : Record128
 )
 
 
 case class Record123 (
-    reco__TrackBase : Record124,
-    extra_ : Record130
+    hitPattern_ : Record124,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record125,
+    momentum_ : Record127,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
+)
+
+
+case class Record130 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record129 (
+    product_ : Record130
+)
+
+
+case class Record122 (
+    reco__TrackBase : Record123,
+    extra_ : Record129
+)
+
+
+case class Record131 (
+    type_ : Int,
+    corrX_ : Float,
+    corrY_ : Float
 )
 
 
@@ -1026,14 +1033,7 @@ case class Record132 (
 )
 
 
-case class Record133 (
-    type_ : Int,
-    corrX_ : Float,
-    corrY_ : Float
-)
-
-
-case class Record136 (
+case class Record135 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -1042,140 +1042,69 @@ case class Record136 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
-)
-
-
-case class Record138 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
 )
 
 
 case class Record137 (
-    fCoordinates : Record138
-)
-
-
-case class Record140 (
     fX : Float,
     fY : Float,
     fZ : Float
+)
+
+
+case class Record136 (
+    fCoordinates : Record137
 )
 
 
 case class Record139 (
-    fCoordinates : Record140
+    fX : Float,
+    fY : Float,
+    fZ : Float
 )
 
 
-case class Record135 (
-    hitPattern_ : Record136,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record137,
-    momentum_ : Record139,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
-)
-
-
-case class Record142 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record141 (
-    product_ : Record142
+case class Record138 (
+    fCoordinates : Record139
 )
 
 
 case class Record134 (
-    reco__TrackBase : Record135,
-    extra_ : Record141
+    hitPattern_ : Record135,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record136,
+    momentum_ : Record138,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
 )
 
 
-case class Record145 (
-    hitPattern : Seq[Short],
-    hitCount : Byte,
-    beginTrackHits : Byte,
-    endTrackHits : Byte,
-    beginInner : Byte,
-    endInner : Byte,
-    beginOuter : Byte,
-    endOuter : Byte
+case class Record141 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
 )
 
 
-case class Record147 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record140 (
+    product_ : Record141
 )
 
 
-case class Record146 (
-    fCoordinates : Record147
-)
-
-
-case class Record149 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record148 (
-    fCoordinates : Record149
+case class Record133 (
+    reco__TrackBase : Record134,
+    extra_ : Record140
 )
 
 
 case class Record144 (
-    hitPattern_ : Record145,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record146,
-    momentum_ : Record148,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
-)
-
-
-case class Record151 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record150 (
-    product_ : Record151
-)
-
-
-case class Record143 (
-    reco__TrackBase : Record144,
-    extra_ : Record150
-)
-
-
-case class Record154 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -1187,36 +1116,36 @@ case class Record154 (
 )
 
 
-case class Record156 (
+case class Record146 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record155 (
-    fCoordinates : Record156
+case class Record145 (
+    fCoordinates : Record146
 )
 
 
-case class Record158 (
+case class Record148 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record157 (
-    fCoordinates : Record158
+case class Record147 (
+    fCoordinates : Record148
 )
 
 
-case class Record153 (
-    hitPattern_ : Record154,
+case class Record143 (
+    hitPattern_ : Record144,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record155,
-    momentum_ : Record157,
+    vertex_ : Record145,
+    momentum_ : Record147,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -1228,102 +1157,173 @@ case class Record153 (
 )
 
 
-case class Record160 (
+case class Record150 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record159 (
-    product_ : Record160
+case class Record149 (
+    product_ : Record150
+)
+
+
+case class Record142 (
+    reco__TrackBase : Record143,
+    extra_ : Record149
+)
+
+
+case class Record153 (
+    hitPattern : Seq[Short],
+    hitCount : Byte,
+    beginTrackHits : Byte,
+    endTrackHits : Byte,
+    beginInner : Byte,
+    endInner : Byte,
+    beginOuter : Byte,
+    endOuter : Byte
+)
+
+
+case class Record155 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record154 (
+    fCoordinates : Record155
+)
+
+
+case class Record157 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record156 (
+    fCoordinates : Record157
 )
 
 
 case class Record152 (
-    reco__TrackBase : Record153,
-    extra_ : Record159
+    hitPattern_ : Record153,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record154,
+    momentum_ : Record156,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
 )
 
 
-case class Record162 (
+case class Record159 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record161 (
-    patMuons_slimmedMuons__RECO_obj_pfCandidateRef__product_ : Record162
+case class Record158 (
+    product_ : Record159
 )
 
 
-case class Record1 (
-    m_state : Record2,
-    innerTrack_ : Record7,
-    outerTrack_ : Record9,
-    globalTrack_ : Record11,
-    patMuons_slimmedMuons__RECO_obj_refittedTrackMap_ : Map[Int, Record13],
+case class Record151 (
+    reco__TrackBase : Record152,
+    extra_ : Record158
+)
+
+
+case class Record161 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record160 (
+    patMuons_slimmedMuons__RECO_obj_pfCandidateRef__product_ : Record161
+)
+
+
+case class Record0 (
+    m_state : Record1,
+    innerTrack_ : Record6,
+    outerTrack_ : Record8,
+    globalTrack_ : Record10,
+    patMuons_slimmedMuons__RECO_obj_refittedTrackMap_ : Map[Int, Record12],
     bestTrackType_ : Int,
     bestTunePTrackType_ : Int,
-    calEnergy_ : Record15,
-    combinedQuality_ : Record22,
-    patMuons_slimmedMuons__RECO_obj_muMatches_ : Seq[Record27],
-    time_ : Record66,
-    rpcTime_ : Record67,
+    calEnergy_ : Record14,
+    combinedQuality_ : Record21,
+    patMuons_slimmedMuons__RECO_obj_muMatches_ : Seq[Record26],
+    time_ : Record65,
+    rpcTime_ : Record66,
     energyValid_ : Boolean,
     matchesValid_ : Boolean,
     isolationValid_ : Boolean,
     pfIsolationValid_ : Boolean,
     qualityValid_ : Boolean,
     caloCompatibility_ : Float,
-    isolationR03_ : Record68,
-    isolationR05_ : Record69,
-    pfIsolationR03_ : Record70,
-    pfIsoMeanDRR03_ : Record71,
-    pfIsoSumDRR03_ : Record72,
-    pfIsolationR04_ : Record73,
-    pfIsoMeanDRR04_ : Record74,
-    pfIsoSumDRR04_ : Record75,
+    isolationR03_ : Record67,
+    isolationR05_ : Record68,
+    pfIsolationR03_ : Record69,
+    pfIsoMeanDRR03_ : Record70,
+    pfIsoSumDRR03_ : Record71,
+    pfIsolationR04_ : Record72,
+    pfIsoMeanDRR04_ : Record73,
+    pfIsoSumDRR04_ : Record74,
     type_ : Int,
-    pfP4_ : Record76,
-    refToOrig_ : Record78,
+    pfP4_ : Record75,
+    refToOrig_ : Record77,
     patMuons_slimmedMuons__RECO_obj_efficiencyNames_ : Seq[String],
     patMuons_slimmedMuons__RECO_obj_overlapLabels_ : Seq[String],
-    patMuons_slimmedMuons__RECO_obj_overlapItems_ : Seq[Record80],
+    patMuons_slimmedMuons__RECO_obj_overlapItems_ : Seq[Record79],
     patMuons_slimmedMuons__RECO_obj_userDataLabels_ : Seq[String],
     patMuons_slimmedMuons__RECO_obj_userFloatLabels_ : Seq[String],
     patMuons_slimmedMuons__RECO_obj_userFloats_ : Seq[Float],
     patMuons_slimmedMuons__RECO_obj_userIntLabels_ : Seq[String],
     patMuons_slimmedMuons__RECO_obj_userInts_ : Seq[Int],
     patMuons_slimmedMuons__RECO_obj_userCandLabels_ : Seq[String],
-    patMuons_slimmedMuons__RECO_obj_userCands_ : Seq[Record83],
+    patMuons_slimmedMuons__RECO_obj_userCands_ : Seq[Record82],
     patMuons_slimmedMuons__RECO_obj_kinResolutionLabels_ : Seq[String],
-    patMuons_slimmedMuons__RECO_obj_isoDeposits_ : Seq[Record85],
+    patMuons_slimmedMuons__RECO_obj_isoDeposits_ : Seq[Record84],
     patMuons_slimmedMuons__RECO_obj_isolations_ : Seq[Float],
-    miniPFIsolation_ : Record86,
+    miniPFIsolation_ : Record85,
     embeddedMuonBestTrack_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_muonBestTrack_ : Seq[Record87],
+    patMuons_slimmedMuons__RECO_obj_muonBestTrack_ : Seq[Record86],
     embeddedTunePMuonBestTrack_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_tunePMuonBestTrack_ : Seq[Record96],
+    patMuons_slimmedMuons__RECO_obj_tunePMuonBestTrack_ : Seq[Record95],
     embeddedTrack_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_track_ : Seq[Record105],
+    patMuons_slimmedMuons__RECO_obj_track_ : Seq[Record104],
     embeddedStandAloneMuon_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_standAloneMuon_ : Seq[Record114],
+    patMuons_slimmedMuons__RECO_obj_standAloneMuon_ : Seq[Record113],
     embeddedCombinedMuon_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_combinedMuon_ : Seq[Record123],
+    patMuons_slimmedMuons__RECO_obj_combinedMuon_ : Seq[Record122],
     embeddedTCMETMuonCorrs_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_tcMETMuonCorrs_ : Seq[Record132],
+    patMuons_slimmedMuons__RECO_obj_tcMETMuonCorrs_ : Seq[Record131],
     embeddedCaloMETMuonCorrs_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_caloMETMuonCorrs_ : Seq[Record133],
+    patMuons_slimmedMuons__RECO_obj_caloMETMuonCorrs_ : Seq[Record132],
     embeddedPickyMuon_ : Boolean,
     embeddedTpfmsMuon_ : Boolean,
     embeddedDytMuon_ : Boolean,
-    patMuons_slimmedMuons__RECO_obj_pickyMuon_ : Seq[Record134],
-    patMuons_slimmedMuons__RECO_obj_tpfmsMuon_ : Seq[Record143],
-    patMuons_slimmedMuons__RECO_obj_dytMuon_ : Seq[Record152],
+    patMuons_slimmedMuons__RECO_obj_pickyMuon_ : Seq[Record133],
+    patMuons_slimmedMuons__RECO_obj_tpfmsMuon_ : Seq[Record142],
+    patMuons_slimmedMuons__RECO_obj_dytMuon_ : Seq[Record151],
     embeddedPFCandidate_ : Boolean,
-    pfCandidateRef_ : Record161,
+    pfCandidateRef_ : Record160,
     cachedNormChi2_ : Boolean,
     normChi2_ : Double,
     cachedNumberOfValidHits_ : Boolean,
@@ -1341,16 +1341,23 @@ case class Record1 (
 )
 
 
-case class Record0 (
-    present : Boolean,
-    patMuons_slimmedMuons__RECO_obj : Seq[Record1]
+case class Record165 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record164 (
+    fCoordinates : Record165
 )
 
 
 case class Record167 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+    fPt : Float,
+    fEta : Float,
+    fPhi : Float,
+    fM : Float
 )
 
 
@@ -1359,29 +1366,16 @@ case class Record166 (
 )
 
 
-case class Record169 (
-    fPt : Float,
-    fEta : Float,
-    fPhi : Float,
-    fM : Float
-)
-
-
-case class Record168 (
-    fCoordinates : Record169
-)
-
-
-case class Record165 (
-    vertex_ : Record166,
-    p4Polar_ : Record168,
+case class Record163 (
+    vertex_ : Record164,
+    p4Polar_ : Record166,
     qx3_ : Int,
     pdgId_ : Int,
     status_ : Int
 )
 
 
-case class Record170 (
+case class Record168 (
     scPixCharge : Int,
     isGsfCtfScPixConsistent : Boolean,
     isGsfScPixConsistent : Boolean,
@@ -1389,32 +1383,32 @@ case class Record170 (
 )
 
 
-case class Record172 (
+case class Record170 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record171 (
-    patElectrons_slimmedElectrons__RECO_obj_core__product_ : Record172
+case class Record169 (
+    patElectrons_slimmedElectrons__RECO_obj_core__product_ : Record170
 )
 
 
-case class Record175 (
+case class Record173 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record174 (
-    patElectrons_slimmedElectrons__RECO_obj_trackClusterMatching__electronCluster_core_ : Record175,
+case class Record172 (
+    patElectrons_slimmedElectrons__RECO_obj_trackClusterMatching__electronCluster_core_ : Record173,
     key_ : Long
 )
 
 
-case class Record173 (
-    electronCluster : Record174,
+case class Record171 (
+    electronCluster : Record172,
     eSuperClusterOverP : Float,
     eSeedClusterOverP : Float,
     eSeedClusterOverPout : Float,
@@ -1425,6 +1419,18 @@ case class Record173 (
     deltaPhiEleClusterAtCalo : Float,
     deltaPhiSuperClusterAtVtx : Float,
     deltaPhiSeedClusterAtCalo : Float
+)
+
+
+case class Record176 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record175 (
+    fCoordinates : Record176
 )
 
 
@@ -1500,30 +1506,18 @@ case class Record187 (
 )
 
 
-case class Record190 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+case class Record174 (
+    positionAtVtx : Record175,
+    positionAtCalo : Record177,
+    momentumAtVtx : Record179,
+    momentumAtCalo : Record181,
+    momentumOut : Record183,
+    momentumAtEleClus : Record185,
+    momentumAtVtxWithConstraint : Record187
 )
 
 
 case class Record189 (
-    fCoordinates : Record190
-)
-
-
-case class Record176 (
-    positionAtVtx : Record177,
-    positionAtCalo : Record179,
-    momentumAtVtx : Record181,
-    momentumAtCalo : Record183,
-    momentumOut : Record185,
-    momentumAtEleClus : Record187,
-    momentumAtVtxWithConstraint : Record189
-)
-
-
-case class Record191 (
     isEB : Boolean,
     isEE : Boolean,
     isEBEEGap : Boolean,
@@ -1534,17 +1528,17 @@ case class Record191 (
 )
 
 
-case class Record194 (
+case class Record192 (
     id_ : Int
 )
 
 
-case class Record193 (
-    DetId : Record194
+case class Record191 (
+    DetId : Record192
 )
 
 
-case class Record192 (
+case class Record190 (
     sigmaEtaEta : Float,
     sigmaIetaIeta : Float,
     sigmaIphiIphi : Float,
@@ -1554,7 +1548,7 @@ case class Record192 (
     r9 : Float,
     hcalDepth1OverEcal : Float,
     hcalDepth2OverEcal : Float,
-    patElectrons_slimmedElectrons__RECO_obj_showerShape__hcalTowersBehindClusters : Seq[Record193],
+    patElectrons_slimmedElectrons__RECO_obj_showerShape__hcalTowersBehindClusters : Seq[Record191],
     hcalDepth1OverEcalBc : Float,
     hcalDepth2OverEcalBc : Float,
     sigmaIetaIphi : Float,
@@ -1568,20 +1562,20 @@ case class Record192 (
     e2x5Left : Float,
     e2x5Right : Float,
     e2x5Bottom : Float
-)
-
-
-case class Record197 (
-    id_ : Int
-)
-
-
-case class Record196 (
-    DetId : Record197
 )
 
 
 case class Record195 (
+    id_ : Int
+)
+
+
+case class Record194 (
+    DetId : Record195
+)
+
+
+case class Record193 (
     sigmaEtaEta : Float,
     sigmaIetaIeta : Float,
     sigmaIphiIphi : Float,
@@ -1591,7 +1585,7 @@ case class Record195 (
     r9 : Float,
     hcalDepth1OverEcal : Float,
     hcalDepth2OverEcal : Float,
-    patElectrons_slimmedElectrons__RECO_obj_full5x5_showerShape__hcalTowersBehindClusters : Seq[Record196],
+    patElectrons_slimmedElectrons__RECO_obj_full5x5_showerShape__hcalTowersBehindClusters : Seq[Record194],
     hcalDepth1OverEcalBc : Float,
     hcalDepth2OverEcalBc : Float,
     sigmaIetaIphi : Float,
@@ -1608,33 +1602,33 @@ case class Record195 (
 )
 
 
-case class Record198 (
+case class Record196 (
     nSaturatedXtals : Int,
     isSeedSaturated : Boolean
 )
 
 
+case class Record197 (
+    tkSumPt : Float,
+    ecalRecHitSumEt : Float,
+    hcalDepth1TowerSumEt : Float,
+    hcalDepth2TowerSumEt : Float,
+    hcalDepth1TowerSumEtBc : Float,
+    hcalDepth2TowerSumEtBc : Float
+)
+
+
+case class Record198 (
+    tkSumPt : Float,
+    ecalRecHitSumEt : Float,
+    hcalDepth1TowerSumEt : Float,
+    hcalDepth2TowerSumEt : Float,
+    hcalDepth1TowerSumEtBc : Float,
+    hcalDepth2TowerSumEtBc : Float
+)
+
+
 case class Record199 (
-    tkSumPt : Float,
-    ecalRecHitSumEt : Float,
-    hcalDepth1TowerSumEt : Float,
-    hcalDepth2TowerSumEt : Float,
-    hcalDepth1TowerSumEtBc : Float,
-    hcalDepth2TowerSumEtBc : Float
-)
-
-
-case class Record200 (
-    tkSumPt : Float,
-    ecalRecHitSumEt : Float,
-    hcalDepth1TowerSumEt : Float,
-    hcalDepth2TowerSumEt : Float,
-    hcalDepth1TowerSumEtBc : Float,
-    hcalDepth2TowerSumEtBc : Float
-)
-
-
-case class Record201 (
     flags : Int,
     dist : Float,
     dcot : Float,
@@ -1642,7 +1636,7 @@ case class Record201 (
 )
 
 
-case class Record202 (
+case class Record200 (
     sumChargedHadronPt : Float,
     sumNeutralHadronEt : Float,
     sumPhotonEt : Float,
@@ -1653,7 +1647,7 @@ case class Record202 (
 )
 
 
-case class Record203 (
+case class Record201 (
     earlyBrem : Int,
     lateBrem : Int,
     sigmaEtaEta : Float,
@@ -1664,7 +1658,7 @@ case class Record203 (
 )
 
 
-case class Record204 (
+case class Record202 (
     status : Int,
     mva_Isolated : Float,
     mva_e_pi : Float,
@@ -1672,26 +1666,39 @@ case class Record204 (
 )
 
 
-case class Record207 (
+case class Record205 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record206 (
-    patElectrons_slimmedElectrons__RECO_obj_ambiguousGsfTracks__refVector__product_ : Record207,
+case class Record204 (
+    patElectrons_slimmedElectrons__RECO_obj_ambiguousGsfTracks__refVector__product_ : Record205,
     patElectrons_slimmedElectrons__RECO_obj_ambiguousGsfTracks__refVector__keys_ : Seq[Int]
 )
 
 
-case class Record205 (
-    refVector_ : Record206
+case class Record203 (
+    refVector_ : Record204
+)
+
+
+case class Record206 (
+    trackFbrem : Float,
+    superClusterFbrem : Float
+)
+
+
+case class Record209 (
+    fX : Double,
+    fY : Double,
+    fZ : Double,
+    fT : Double
 )
 
 
 case class Record208 (
-    trackFbrem : Float,
-    superClusterFbrem : Float
+    fCoordinates : Record209
 )
 
 
@@ -1721,35 +1728,22 @@ case class Record212 (
 )
 
 
-case class Record215 (
-    fX : Double,
-    fY : Double,
-    fZ : Double,
-    fT : Double
-)
-
-
-case class Record214 (
-    fCoordinates : Record215
-)
-
-
-case class Record209 (
+case class Record207 (
     isEcalEnergyCorrected : Boolean,
     correctedEcalEnergy : Float,
     correctedEcalEnergyError : Float,
     trackMomentumError : Float,
-    fromSuperClusterP4 : Record210,
+    fromSuperClusterP4 : Record208,
     fromSuperClusterP4Error : Float,
-    combinedP4 : Record212,
+    combinedP4 : Record210,
     combinedP4Error : Float,
-    pflowP4 : Record214,
+    pflowP4 : Record212,
     pflowP4Error : Float,
     candidateP4Kind : Int
 )
 
 
-case class Record216 (
+case class Record214 (
     dPhi1 : Float,
     dPhi2 : Float,
     dRz1 : Float,
@@ -1758,15 +1752,32 @@ case class Record216 (
 )
 
 
-case class Record218 (
+case class Record216 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record217 (
-    patElectrons_slimmedElectrons__RECO_obj_refToOrig__core_ : Record218,
+case class Record215 (
+    patElectrons_slimmedElectrons__RECO_obj_refToOrig__core_ : Record216,
     key_ : Long
+)
+
+
+case class Record219 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record218 (
+    core_ : Record219,
+    indicies_ : Seq[Long]
+)
+
+
+case class Record217 (
+    edm__PtrVectorBase : Record218
 )
 
 
@@ -1778,38 +1789,33 @@ case class Record221 (
 
 case class Record220 (
     core_ : Record221,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record219 (
-    edm__PtrVectorBase : Record220
-)
-
-
-case class Record223 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record222 (
-    core_ : Record223,
     key_ : Long
 )
 
 
-case class Record224 (
+case class Record222 (
     first : Int,
     second : Int
 )
 
 
-case class Record225 (
+case class Record223 (
     chiso_ : Float,
     nhiso_ : Float,
     phiso_ : Float,
     puiso_ : Float
+)
+
+
+case class Record226 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record225 (
+    product_ : Record226
 )
 
 
@@ -1849,66 +1855,54 @@ case class Record231 (
 )
 
 
-case class Record234 (
+case class Record235 (
     processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
+    productIndex_ : Short
+)
+
+
+case class Record234 (
+    product_ : Record235,
+    keys_ : Seq[Int]
 )
 
 
 case class Record233 (
-    product_ : Record234
-)
-
-
-case class Record237 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record236 (
-    product_ : Record237,
-    keys_ : Seq[Int]
-)
-
-
-case class Record235 (
-    refVector_ : Record236
-)
-
-
-case class Record240 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record239 (
-    product_ : Record240,
-    keys_ : Seq[Int]
+    refVector_ : Record234
 )
 
 
 case class Record238 (
-    refVector_ : Record239
+    processIndex_ : Short,
+    productIndex_ : Short
 )
 
 
-case class Record226 (
-    gsfTrack_ : Record227,
-    superCluster_ : Record229,
-    parentSuperCluster_ : Record231,
-    closestCtfTrack_ : Record233,
-    conversions_ : Record235,
-    conversionsOneLeg_ : Record238,
+case class Record237 (
+    product_ : Record238,
+    keys_ : Seq[Int]
+)
+
+
+case class Record236 (
+    refVector_ : Record237
+)
+
+
+case class Record224 (
+    gsfTrack_ : Record225,
+    superCluster_ : Record227,
+    parentSuperCluster_ : Record229,
+    closestCtfTrack_ : Record231,
+    conversions_ : Record233,
+    conversionsOneLeg_ : Record236,
     ctfGsfOverlap_ : Float,
     isEcalDrivenSeed_ : Boolean,
     isTrackerDrivenSeed_ : Boolean
 )
 
 
-case class Record244 (
+case class Record242 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -1917,6 +1911,18 @@ case class Record244 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
+)
+
+
+case class Record244 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record243 (
+    fCoordinates : Record244
 )
 
 
@@ -1932,24 +1938,12 @@ case class Record245 (
 )
 
 
-case class Record248 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record247 (
-    fCoordinates : Record248
-)
-
-
-case class Record243 (
-    hitPattern_ : Record244,
+case class Record241 (
+    hitPattern_ : Record242,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record245,
-    momentum_ : Record247,
+    vertex_ : Record243,
+    momentum_ : Record245,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -1958,6 +1952,24 @@ case class Record243 (
     quality_ : Byte,
     nLoops_ : Byte,
     stopReason_ : Byte
+)
+
+
+case class Record248 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record247 (
+    product_ : Record248
+)
+
+
+case class Record240 (
+    reco__TrackBase : Record241,
+    extra_ : Record247
 )
 
 
@@ -1973,432 +1985,124 @@ case class Record249 (
 )
 
 
-case class Record242 (
-    reco__TrackBase : Record243,
-    extra_ : Record249
-)
-
-
 case class Record252 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record251 (
-    product_ : Record252
-)
-
-
-case class Record254 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record253 (
-    fCoordinates : Record254
+case class Record251 (
+    fCoordinates : Record252
 )
 
 
-case class Record241 (
-    reco__Track : Record242,
-    gsfExtra_ : Record251,
+case class Record239 (
+    reco__Track : Record240,
+    gsfExtra_ : Record249,
     chargeMode_ : Byte,
-    momentumMode_ : Record253,
+    momentumMode_ : Record251,
     covarianceMode_ : Seq[Float]
 )
 
 
-case class Record258 (
+case class Record256 (
     fX : Double,
     fY : Double,
     fZ : Double
-)
-
-
-case class Record257 (
-    fCoordinates : Record258
-)
-
-
-case class Record259 (
-    detectors_ : Int
-)
-
-
-case class Record261 (
-    id_ : Int
-)
-
-
-case class Record260 (
-    first : Record261,
-    second : Float
-)
-
-
-case class Record262 (
-    id_ : Int
-)
-
-
-case class Record256 (
-    energy_ : Double,
-    correctedEnergy_ : Double,
-    correctedEnergyUncertainty_ : Float,
-    position_ : Record257,
-    caloID_ : Record259,
-    hitsAndFractions_ : Seq[Record260],
-    algoID_ : Int,
-    seedId_ : Record262,
-    flags_ : Int
-)
-
-
-case class Record264 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record263 (
-    core_ : Record264,
-    key_ : Long
-)
-
-
-case class Record267 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record266 (
-    core_ : Record267,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record265 (
-    edm__PtrVectorBase : Record266
-)
-
-
-case class Record270 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record269 (
-    core_ : Record270,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record268 (
-    edm__PtrVectorBase : Record269
 )
 
 
 case class Record255 (
-    reco__CaloCluster : Record256,
-    seed_ : Record263,
-    clusters_ : Record265,
-    preshowerClusters_ : Record268,
-    preshowerEnergy_ : Double,
-    rawEnergy_ : Float,
-    phiWidth_ : Float,
-    etaWidth_ : Float,
-    preshowerEnergy1_ : Double,
-    preshowerEnergy2_ : Double
+    fCoordinates : Record256
 )
 
 
-case class Record273 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
-)
-
-
-case class Record272 (
-    fCoordinates : Record273
-)
-
-
-case class Record274 (
+case class Record257 (
     detectors_ : Int
 )
 
 
-case class Record276 (
+case class Record259 (
     id_ : Int
 )
 
 
-case class Record275 (
-    first : Record276,
+case class Record258 (
+    first : Record259,
     second : Float
 )
 
 
-case class Record277 (
+case class Record260 (
     id_ : Int
 )
 
 
-case class Record271 (
+case class Record254 (
     energy_ : Double,
     correctedEnergy_ : Double,
     correctedEnergyUncertainty_ : Float,
-    position_ : Record272,
-    caloID_ : Record274,
-    hitsAndFractions_ : Seq[Record275],
+    position_ : Record255,
+    caloID_ : Record257,
+    hitsAndFractions_ : Seq[Record258],
     algoID_ : Int,
-    seedId_ : Record277,
+    seedId_ : Record260,
     flags_ : Int
 )
 
 
-case class Record280 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
-)
-
-
-case class Record279 (
-    fCoordinates : Record280
-)
-
-
-case class Record281 (
-    detectors_ : Int
-)
-
-
-case class Record283 (
-    id_ : Int
-)
-
-
-case class Record282 (
-    first : Record283,
-    second : Float
-)
-
-
-case class Record284 (
-    id_ : Int
-)
-
-
-case class Record278 (
-    energy_ : Double,
-    correctedEnergy_ : Double,
-    correctedEnergyUncertainty_ : Float,
-    position_ : Record279,
-    caloID_ : Record281,
-    hitsAndFractions_ : Seq[Record282],
-    algoID_ : Int,
-    seedId_ : Record284,
-    flags_ : Int
-)
-
-
-case class Record287 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
-)
-
-
-case class Record286 (
-    fCoordinates : Record287
-)
-
-
-case class Record288 (
-    detectors_ : Int
-)
-
-
-case class Record290 (
-    id_ : Int
-)
-
-
-case class Record289 (
-    first : Record290,
-    second : Float
-)
-
-
-case class Record291 (
-    id_ : Int
-)
-
-
-case class Record285 (
-    energy_ : Double,
-    correctedEnergy_ : Double,
-    correctedEnergyUncertainty_ : Float,
-    position_ : Record286,
-    caloID_ : Record288,
-    hitsAndFractions_ : Seq[Record289],
-    algoID_ : Int,
-    seedId_ : Record291,
-    flags_ : Int
-)
-
-
-case class Record294 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
-)
-
-
-case class Record293 (
-    fCoordinates : Record294
-)
-
-
-case class Record295 (
-    detectors_ : Int
-)
-
-
-case class Record297 (
-    id_ : Int
-)
-
-
-case class Record296 (
-    first : Record297,
-    second : Float
-)
-
-
-case class Record298 (
-    id_ : Int
-)
-
-
-case class Record292 (
-    energy_ : Double,
-    correctedEnergy_ : Double,
-    correctedEnergyUncertainty_ : Float,
-    position_ : Record293,
-    caloID_ : Record295,
-    hitsAndFractions_ : Seq[Record296],
-    algoID_ : Int,
-    seedId_ : Record298,
-    flags_ : Int
-)
-
-
-case class Record302 (
-    fX : Double,
-    fY : Double,
-    fZ : Double
-)
-
-
-case class Record301 (
-    fCoordinates : Record302
-)
-
-
-case class Record303 (
-    detectors_ : Int
-)
-
-
-case class Record305 (
-    id_ : Int
-)
-
-
-case class Record304 (
-    first : Record305,
-    second : Float
-)
-
-
-case class Record306 (
-    id_ : Int
-)
-
-
-case class Record300 (
-    energy_ : Double,
-    correctedEnergy_ : Double,
-    correctedEnergyUncertainty_ : Float,
-    position_ : Record301,
-    caloID_ : Record303,
-    hitsAndFractions_ : Seq[Record304],
-    algoID_ : Int,
-    seedId_ : Record306,
-    flags_ : Int
-)
-
-
-case class Record308 (
+case class Record262 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record307 (
-    core_ : Record308,
+case class Record261 (
+    core_ : Record262,
     key_ : Long
 )
 
 
-case class Record311 (
+case class Record265 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record310 (
-    core_ : Record311,
+case class Record264 (
+    core_ : Record265,
     indicies_ : Seq[Long]
 )
 
 
-case class Record309 (
-    edm__PtrVectorBase : Record310
+case class Record263 (
+    edm__PtrVectorBase : Record264
 )
 
 
-case class Record314 (
+case class Record268 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record313 (
-    core_ : Record314,
+case class Record267 (
+    core_ : Record268,
     indicies_ : Seq[Long]
 )
 
 
-case class Record312 (
-    edm__PtrVectorBase : Record313
+case class Record266 (
+    edm__PtrVectorBase : Record267
 )
 
 
-case class Record299 (
-    reco__CaloCluster : Record300,
-    seed_ : Record307,
-    clusters_ : Record309,
-    preshowerClusters_ : Record312,
+case class Record253 (
+    reco__CaloCluster : Record254,
+    seed_ : Record261,
+    clusters_ : Record263,
+    preshowerClusters_ : Record266,
     preshowerEnergy_ : Double,
     rawEnergy_ : Float,
     phiWidth_ : Float,
@@ -2408,7 +2112,297 @@ case class Record299 (
 )
 
 
-case class Record317 (
+case class Record271 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record270 (
+    fCoordinates : Record271
+)
+
+
+case class Record272 (
+    detectors_ : Int
+)
+
+
+case class Record274 (
+    id_ : Int
+)
+
+
+case class Record273 (
+    first : Record274,
+    second : Float
+)
+
+
+case class Record275 (
+    id_ : Int
+)
+
+
+case class Record269 (
+    energy_ : Double,
+    correctedEnergy_ : Double,
+    correctedEnergyUncertainty_ : Float,
+    position_ : Record270,
+    caloID_ : Record272,
+    hitsAndFractions_ : Seq[Record273],
+    algoID_ : Int,
+    seedId_ : Record275,
+    flags_ : Int
+)
+
+
+case class Record278 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record277 (
+    fCoordinates : Record278
+)
+
+
+case class Record279 (
+    detectors_ : Int
+)
+
+
+case class Record281 (
+    id_ : Int
+)
+
+
+case class Record280 (
+    first : Record281,
+    second : Float
+)
+
+
+case class Record282 (
+    id_ : Int
+)
+
+
+case class Record276 (
+    energy_ : Double,
+    correctedEnergy_ : Double,
+    correctedEnergyUncertainty_ : Float,
+    position_ : Record277,
+    caloID_ : Record279,
+    hitsAndFractions_ : Seq[Record280],
+    algoID_ : Int,
+    seedId_ : Record282,
+    flags_ : Int
+)
+
+
+case class Record285 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record284 (
+    fCoordinates : Record285
+)
+
+
+case class Record286 (
+    detectors_ : Int
+)
+
+
+case class Record288 (
+    id_ : Int
+)
+
+
+case class Record287 (
+    first : Record288,
+    second : Float
+)
+
+
+case class Record289 (
+    id_ : Int
+)
+
+
+case class Record283 (
+    energy_ : Double,
+    correctedEnergy_ : Double,
+    correctedEnergyUncertainty_ : Float,
+    position_ : Record284,
+    caloID_ : Record286,
+    hitsAndFractions_ : Seq[Record287],
+    algoID_ : Int,
+    seedId_ : Record289,
+    flags_ : Int
+)
+
+
+case class Record292 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record291 (
+    fCoordinates : Record292
+)
+
+
+case class Record293 (
+    detectors_ : Int
+)
+
+
+case class Record295 (
+    id_ : Int
+)
+
+
+case class Record294 (
+    first : Record295,
+    second : Float
+)
+
+
+case class Record296 (
+    id_ : Int
+)
+
+
+case class Record290 (
+    energy_ : Double,
+    correctedEnergy_ : Double,
+    correctedEnergyUncertainty_ : Float,
+    position_ : Record291,
+    caloID_ : Record293,
+    hitsAndFractions_ : Seq[Record294],
+    algoID_ : Int,
+    seedId_ : Record296,
+    flags_ : Int
+)
+
+
+case class Record300 (
+    fX : Double,
+    fY : Double,
+    fZ : Double
+)
+
+
+case class Record299 (
+    fCoordinates : Record300
+)
+
+
+case class Record301 (
+    detectors_ : Int
+)
+
+
+case class Record303 (
+    id_ : Int
+)
+
+
+case class Record302 (
+    first : Record303,
+    second : Float
+)
+
+
+case class Record304 (
+    id_ : Int
+)
+
+
+case class Record298 (
+    energy_ : Double,
+    correctedEnergy_ : Double,
+    correctedEnergyUncertainty_ : Float,
+    position_ : Record299,
+    caloID_ : Record301,
+    hitsAndFractions_ : Seq[Record302],
+    algoID_ : Int,
+    seedId_ : Record304,
+    flags_ : Int
+)
+
+
+case class Record306 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record305 (
+    core_ : Record306,
+    key_ : Long
+)
+
+
+case class Record309 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record308 (
+    core_ : Record309,
+    indicies_ : Seq[Long]
+)
+
+
+case class Record307 (
+    edm__PtrVectorBase : Record308
+)
+
+
+case class Record312 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record311 (
+    core_ : Record312,
+    indicies_ : Seq[Long]
+)
+
+
+case class Record310 (
+    edm__PtrVectorBase : Record311
+)
+
+
+case class Record297 (
+    reco__CaloCluster : Record298,
+    seed_ : Record305,
+    clusters_ : Record307,
+    preshowerClusters_ : Record310,
+    preshowerEnergy_ : Double,
+    rawEnergy_ : Float,
+    phiWidth_ : Float,
+    etaWidth_ : Float,
+    preshowerEnergy1_ : Double,
+    preshowerEnergy2_ : Double
+)
+
+
+case class Record315 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -2417,6 +2411,18 @@ case class Record317 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
+)
+
+
+case class Record317 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record316 (
+    fCoordinates : Record317
 )
 
 
@@ -2432,24 +2438,12 @@ case class Record318 (
 )
 
 
-case class Record321 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record320 (
-    fCoordinates : Record321
-)
-
-
-case class Record316 (
-    hitPattern_ : Record317,
+case class Record314 (
+    hitPattern_ : Record315,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record318,
-    momentum_ : Record320,
+    vertex_ : Record316,
+    momentum_ : Record318,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -2461,77 +2455,77 @@ case class Record316 (
 )
 
 
-case class Record323 (
+case class Record321 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record322 (
-    product_ : Record323
+case class Record320 (
+    product_ : Record321
 )
 
 
-case class Record315 (
-    reco__TrackBase : Record316,
-    extra_ : Record322
+case class Record313 (
+    reco__TrackBase : Record314,
+    extra_ : Record320
 )
 
 
-case class Record326 (
+case class Record324 (
     fX : Double,
     fY : Double,
     fZ : Double
 )
 
 
-case class Record325 (
-    fCoordinates : Record326
+case class Record323 (
+    fCoordinates : Record324
 )
 
 
-case class Record327 (
+case class Record325 (
     detectors_ : Int
 )
 
 
-case class Record329 (
+case class Record327 (
     id_ : Int
 )
 
 
-case class Record328 (
-    first : Record329,
+case class Record326 (
+    first : Record327,
     second : Float
 )
 
 
-case class Record330 (
+case class Record328 (
     id_ : Int
 )
 
 
-case class Record324 (
+case class Record322 (
     energy_ : Double,
     correctedEnergy_ : Double,
     correctedEnergyUncertainty_ : Float,
-    position_ : Record325,
-    caloID_ : Record327,
-    hitsAndFractions_ : Seq[Record328],
+    position_ : Record323,
+    caloID_ : Record325,
+    hitsAndFractions_ : Seq[Record326],
     algoID_ : Int,
-    seedId_ : Record330,
+    seedId_ : Record328,
     flags_ : Int
 )
 
 
-case class Record333 (
+case class Record331 (
     id_ : Int
 )
 
 
-case class Record332 (
-    id_ : Record333,
+case class Record330 (
+    id_ : Record331,
     energy_ : Float,
     time_ : Float,
     flagBits_ : Int,
@@ -2539,30 +2533,30 @@ case class Record332 (
 )
 
 
-case class Record331 (
-    patElectrons_slimmedElectrons__RECO_obj_recHits__obj : Seq[Record332]
+case class Record329 (
+    patElectrons_slimmedElectrons__RECO_obj_recHits__obj : Seq[Record330]
 )
 
 
-case class Record334 (
+case class Record332 (
     first : String,
     second : Float
 )
 
 
-case class Record336 (
+case class Record334 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record335 (
-    patElectrons_slimmedElectrons__RECO_obj_pfCandidateRef__product_ : Record336
+case class Record333 (
+    patElectrons_slimmedElectrons__RECO_obj_pfCandidateRef__product_ : Record334
 )
 
 
-case class Record338 (
+case class Record336 (
     fX : Double,
     fY : Double,
     fZ : Double,
@@ -2570,85 +2564,85 @@ case class Record338 (
 )
 
 
-case class Record337 (
-    fCoordinates : Record338
+case class Record335 (
+    fCoordinates : Record336
 )
 
 
-case class Record340 (
+case class Record338 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record339 (
-    patElectrons_slimmedElectrons__RECO_obj_packedPFCandidates__product_ : Record340
+case class Record337 (
+    patElectrons_slimmedElectrons__RECO_obj_packedPFCandidates__product_ : Record338
 )
 
 
-case class Record164 (
-    m_state : Record165,
-    chargeInfo_ : Record170,
-    core_ : Record171,
-    trackClusterMatching_ : Record173,
-    trackExtrapolations_ : Record176,
-    fiducialFlags_ : Record191,
-    showerShape_ : Record192,
-    full5x5_showerShape_ : Record195,
-    saturationInfo_ : Record198,
-    dr03_ : Record199,
-    dr04_ : Record200,
-    conversionRejection_ : Record201,
-    pfIso_ : Record202,
-    mvaInput_ : Record203,
-    mvaOutput_ : Record204,
+case class Record162 (
+    m_state : Record163,
+    chargeInfo_ : Record168,
+    core_ : Record169,
+    trackClusterMatching_ : Record171,
+    trackExtrapolations_ : Record174,
+    fiducialFlags_ : Record189,
+    showerShape_ : Record190,
+    full5x5_showerShape_ : Record193,
+    saturationInfo_ : Record196,
+    dr03_ : Record197,
+    dr04_ : Record198,
+    conversionRejection_ : Record199,
+    pfIso_ : Record200,
+    mvaInput_ : Record201,
+    mvaOutput_ : Record202,
     passCutBasedPreselection_ : Boolean,
     passPflowPreselection_ : Boolean,
     passMvaPreslection_ : Boolean,
     ambiguous_ : Boolean,
-    ambiguousGsfTracks_ : Record205,
-    classVariables_ : Record208,
+    ambiguousGsfTracks_ : Record203,
+    classVariables_ : Record206,
     class_ : Int,
-    corrections_ : Record209,
-    pixelMatchVariables_ : Record216,
-    refToOrig_ : Record217,
+    corrections_ : Record207,
+    pixelMatchVariables_ : Record214,
+    refToOrig_ : Record215,
     patElectrons_slimmedElectrons__RECO_obj_efficiencyNames_ : Seq[String],
     patElectrons_slimmedElectrons__RECO_obj_overlapLabels_ : Seq[String],
-    patElectrons_slimmedElectrons__RECO_obj_overlapItems_ : Seq[Record219],
+    patElectrons_slimmedElectrons__RECO_obj_overlapItems_ : Seq[Record217],
     patElectrons_slimmedElectrons__RECO_obj_userDataLabels_ : Seq[String],
     patElectrons_slimmedElectrons__RECO_obj_userFloatLabels_ : Seq[String],
     patElectrons_slimmedElectrons__RECO_obj_userFloats_ : Seq[Float],
     patElectrons_slimmedElectrons__RECO_obj_userIntLabels_ : Seq[String],
     patElectrons_slimmedElectrons__RECO_obj_userInts_ : Seq[Int],
     patElectrons_slimmedElectrons__RECO_obj_userCandLabels_ : Seq[String],
-    patElectrons_slimmedElectrons__RECO_obj_userCands_ : Seq[Record222],
+    patElectrons_slimmedElectrons__RECO_obj_userCands_ : Seq[Record220],
     patElectrons_slimmedElectrons__RECO_obj_kinResolutionLabels_ : Seq[String],
-    patElectrons_slimmedElectrons__RECO_obj_isoDeposits_ : Seq[Record224],
+    patElectrons_slimmedElectrons__RECO_obj_isoDeposits_ : Seq[Record222],
     patElectrons_slimmedElectrons__RECO_obj_isolations_ : Seq[Float],
-    miniPFIsolation_ : Record225,
+    miniPFIsolation_ : Record223,
     embeddedGsfElectronCore_ : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj_gsfElectronCore_ : Seq[Record226],
+    patElectrons_slimmedElectrons__RECO_obj_gsfElectronCore_ : Seq[Record224],
     embeddedGsfTrack_ : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj_gsfTrack_ : Seq[Record241],
+    patElectrons_slimmedElectrons__RECO_obj_gsfTrack_ : Seq[Record239],
     embeddedSuperCluster_ : Boolean,
     embeddedPflowSuperCluster_ : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj_superCluster_ : Seq[Record255],
-    patElectrons_slimmedElectrons__RECO_obj_basicClusters_ : Seq[Record271],
-    patElectrons_slimmedElectrons__RECO_obj_preshowerClusters_ : Seq[Record278],
-    patElectrons_slimmedElectrons__RECO_obj_pflowBasicClusters_ : Seq[Record285],
-    patElectrons_slimmedElectrons__RECO_obj_pflowPreshowerClusters_ : Seq[Record292],
-    patElectrons_slimmedElectrons__RECO_obj_pflowSuperCluster_ : Seq[Record299],
+    patElectrons_slimmedElectrons__RECO_obj_superCluster_ : Seq[Record253],
+    patElectrons_slimmedElectrons__RECO_obj_basicClusters_ : Seq[Record269],
+    patElectrons_slimmedElectrons__RECO_obj_preshowerClusters_ : Seq[Record276],
+    patElectrons_slimmedElectrons__RECO_obj_pflowBasicClusters_ : Seq[Record283],
+    patElectrons_slimmedElectrons__RECO_obj_pflowPreshowerClusters_ : Seq[Record290],
+    patElectrons_slimmedElectrons__RECO_obj_pflowSuperCluster_ : Seq[Record297],
     embeddedTrack_ : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj_track_ : Seq[Record315],
+    patElectrons_slimmedElectrons__RECO_obj_track_ : Seq[Record313],
     embeddedSeedCluster_ : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj_seedCluster_ : Seq[Record324],
+    patElectrons_slimmedElectrons__RECO_obj_seedCluster_ : Seq[Record322],
     embeddedRecHits_ : Boolean,
-    recHits_ : Record331,
-    patElectrons_slimmedElectrons__RECO_obj_electronIDs_ : Seq[Record334],
+    recHits_ : Record329,
+    patElectrons_slimmedElectrons__RECO_obj_electronIDs_ : Seq[Record332],
     isPF_ : Boolean,
     embeddedPFCandidate_ : Boolean,
-    pfCandidateRef_ : Record335,
-    ecalDrivenMomentum_ : Record337,
+    pfCandidateRef_ : Record333,
+    ecalDrivenMomentum_ : Record335,
     sigmaIetaIphi_ : Float,
     full5x5_sigmaIetaIphi_ : Float,
     ip3d_ : Double,
@@ -2674,30 +2668,24 @@ case class Record164 (
     cachedIP_ : Byte,
     ip_ : Seq[Float],
     eip_ : Seq[Float],
-    packedPFCandidates_ : Record339,
+    packedPFCandidates_ : Record337,
     patElectrons_slimmedElectrons__RECO_obj_associatedPackedFCandidateIndices_ : Seq[Short]
 )
 
 
-case class Record163 (
-    present : Boolean,
-    patElectrons_slimmedElectrons__RECO_obj : Seq[Record164]
-)
-
-
-case class Record345 (
+case class Record342 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record344 (
-    fCoordinates : Record345
+case class Record341 (
+    fCoordinates : Record342
 )
 
 
-case class Record347 (
+case class Record344 (
     fPt : Float,
     fEta : Float,
     fPhi : Float,
@@ -2705,21 +2693,21 @@ case class Record347 (
 )
 
 
-case class Record346 (
-    fCoordinates : Record347
+case class Record343 (
+    fCoordinates : Record344
 )
 
 
-case class Record343 (
-    vertex_ : Record344,
-    p4Polar_ : Record346,
+case class Record340 (
+    vertex_ : Record341,
+    p4Polar_ : Record343,
     qx3_ : Int,
     pdgId_ : Int,
     status_ : Int
 )
 
 
-case class Record349 (
+case class Record346 (
     fX : Double,
     fY : Double,
     fZ : Double,
@@ -2727,20 +2715,37 @@ case class Record349 (
 )
 
 
-case class Record348 (
-    fCoordinates : Record349
+case class Record345 (
+    fCoordinates : Record346
 )
 
 
-case class Record351 (
+case class Record348 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
+case class Record347 (
+    patTaus_slimmedTaus__RECO_obj_leadTrack__product_ : Record348
+)
+
+
+case class Record351 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
 case class Record350 (
-    patTaus_slimmedTaus__RECO_obj_leadTrack__product_ : Record351
+    patTaus_slimmedTaus__RECO_obj_signalTracks__refVector__product_ : Record351,
+    patTaus_slimmedTaus__RECO_obj_signalTracks__refVector__keys_ : Seq[Int]
+)
+
+
+case class Record349 (
+    refVector_ : Record350
 )
 
 
@@ -2751,8 +2756,8 @@ case class Record354 (
 
 
 case class Record353 (
-    patTaus_slimmedTaus__RECO_obj_signalTracks__refVector__product_ : Record354,
-    patTaus_slimmedTaus__RECO_obj_signalTracks__refVector__keys_ : Seq[Int]
+    patTaus_slimmedTaus__RECO_obj_isolationTracks__refVector__product_ : Record354,
+    patTaus_slimmedTaus__RECO_obj_isolationTracks__refVector__keys_ : Seq[Int]
 )
 
 
@@ -2761,20 +2766,15 @@ case class Record352 (
 )
 
 
-case class Record357 (
+case class Record356 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record356 (
-    patTaus_slimmedTaus__RECO_obj_isolationTracks__refVector__product_ : Record357,
-    patTaus_slimmedTaus__RECO_obj_isolationTracks__refVector__keys_ : Seq[Int]
-)
-
-
 case class Record355 (
-    refVector_ : Record356
+    patTaus_slimmedTaus__RECO_obj_refToOrig__core_ : Record356,
+    key_ : Long
 )
 
 
@@ -2785,47 +2785,35 @@ case class Record359 (
 
 
 case class Record358 (
-    patTaus_slimmedTaus__RECO_obj_refToOrig__core_ : Record359,
+    core_ : Record359,
+    indicies_ : Seq[Long]
+)
+
+
+case class Record357 (
+    edm__PtrVectorBase : Record358
+)
+
+
+case class Record361 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record360 (
+    core_ : Record361,
     key_ : Long
 )
 
 
 case class Record362 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record361 (
-    core_ : Record362,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record360 (
-    edm__PtrVectorBase : Record361
-)
-
-
-case class Record364 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record363 (
-    core_ : Record364,
-    key_ : Long
-)
-
-
-case class Record365 (
     first : Int,
     second : Int
 )
 
 
-case class Record366 (
+case class Record363 (
     chiso_ : Float,
     nhiso_ : Float,
     phiso_ : Float,
@@ -2833,7 +2821,7 @@ case class Record366 (
 )
 
 
-case class Record369 (
+case class Record366 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -2842,69 +2830,69 @@ case class Record369 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
-)
-
-
-case class Record371 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record370 (
-    fCoordinates : Record371
-)
-
-
-case class Record373 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record372 (
-    fCoordinates : Record373
 )
 
 
 case class Record368 (
-    hitPattern_ : Record369,
-    covariance_ : Seq[Float],
-    chi2_ : Float,
-    vertex_ : Record370,
-    momentum_ : Record372,
-    algoMask_ : Seq[Boolean],
-    ndof_ : Float,
-    charge_ : Byte,
-    algorithm_ : Byte,
-    originalAlgorithm_ : Byte,
-    quality_ : Byte,
-    nLoops_ : Byte,
-    stopReason_ : Byte
-)
-
-
-case class Record375 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record374 (
-    product_ : Record375
+    fX : Float,
+    fY : Float,
+    fZ : Float
 )
 
 
 case class Record367 (
-    reco__TrackBase : Record368,
-    extra_ : Record374
+    fCoordinates : Record368
 )
 
 
-case class Record378 (
+case class Record370 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record369 (
+    fCoordinates : Record370
+)
+
+
+case class Record365 (
+    hitPattern_ : Record366,
+    covariance_ : Seq[Float],
+    chi2_ : Float,
+    vertex_ : Record367,
+    momentum_ : Record369,
+    algoMask_ : Seq[Boolean],
+    ndof_ : Float,
+    charge_ : Byte,
+    algorithm_ : Byte,
+    originalAlgorithm_ : Byte,
+    quality_ : Byte,
+    nLoops_ : Byte,
+    stopReason_ : Byte
+)
+
+
+case class Record372 (
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record371 (
+    product_ : Record372
+)
+
+
+case class Record364 (
+    reco__TrackBase : Record365,
+    extra_ : Record371
+)
+
+
+case class Record375 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -2913,39 +2901,39 @@ case class Record378 (
     endInner : Byte,
     beginOuter : Byte,
     endOuter : Byte
-)
-
-
-case class Record380 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record379 (
-    fCoordinates : Record380
-)
-
-
-case class Record382 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
-)
-
-
-case class Record381 (
-    fCoordinates : Record382
 )
 
 
 case class Record377 (
-    hitPattern_ : Record378,
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record376 (
+    fCoordinates : Record377
+)
+
+
+case class Record379 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record378 (
+    fCoordinates : Record379
+)
+
+
+case class Record374 (
+    hitPattern_ : Record375,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record379,
-    momentum_ : Record381,
+    vertex_ : Record376,
+    momentum_ : Record378,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -2957,25 +2945,25 @@ case class Record377 (
 )
 
 
-case class Record384 (
+case class Record381 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record383 (
-    product_ : Record384
+case class Record380 (
+    product_ : Record381
 )
 
 
-case class Record376 (
-    reco__TrackBase : Record377,
-    extra_ : Record383
+case class Record373 (
+    reco__TrackBase : Record374,
+    extra_ : Record380
 )
 
 
-case class Record387 (
+case class Record384 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -2987,36 +2975,36 @@ case class Record387 (
 )
 
 
-case class Record389 (
+case class Record386 (
     fX : Float,
     fY : Float,
     fZ : Float
+)
+
+
+case class Record385 (
+    fCoordinates : Record386
 )
 
 
 case class Record388 (
-    fCoordinates : Record389
-)
-
-
-case class Record391 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record390 (
-    fCoordinates : Record391
+case class Record387 (
+    fCoordinates : Record388
 )
 
 
-case class Record386 (
-    hitPattern_ : Record387,
+case class Record383 (
+    hitPattern_ : Record384,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record388,
-    momentum_ : Record390,
+    vertex_ : Record385,
+    momentum_ : Record387,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -3028,116 +3016,116 @@ case class Record386 (
 )
 
 
-case class Record393 (
+case class Record390 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record392 (
-    product_ : Record393
+case class Record389 (
+    product_ : Record390
 )
 
 
-case class Record385 (
-    reco__TrackBase : Record386,
-    extra_ : Record392
+case class Record382 (
+    reco__TrackBase : Record383,
+    extra_ : Record389
 )
 
 
-case class Record394 (
+case class Record391 (
     first : String,
     second : Float
 )
 
 
-case class Record396 (
+case class Record393 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record395 (
-    patTaus_slimmedTaus__RECO_obj_signalChargedHadrCandPtrs__core_ : Record396,
+case class Record392 (
+    patTaus_slimmedTaus__RECO_obj_signalChargedHadrCandPtrs__core_ : Record393,
     patTaus_slimmedTaus__RECO_obj_signalChargedHadrCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record398 (
+case class Record395 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record397 (
-    patTaus_slimmedTaus__RECO_obj_signalNeutralHadrCandPtrs__core_ : Record398,
+case class Record394 (
+    patTaus_slimmedTaus__RECO_obj_signalNeutralHadrCandPtrs__core_ : Record395,
     patTaus_slimmedTaus__RECO_obj_signalNeutralHadrCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record400 (
+case class Record397 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record399 (
-    patTaus_slimmedTaus__RECO_obj_signalGammaCandPtrs__core_ : Record400,
+case class Record396 (
+    patTaus_slimmedTaus__RECO_obj_signalGammaCandPtrs__core_ : Record397,
     patTaus_slimmedTaus__RECO_obj_signalGammaCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record402 (
+case class Record399 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record401 (
-    patTaus_slimmedTaus__RECO_obj_isolationChargedHadrCandPtrs__core_ : Record402,
+case class Record398 (
+    patTaus_slimmedTaus__RECO_obj_isolationChargedHadrCandPtrs__core_ : Record399,
     patTaus_slimmedTaus__RECO_obj_isolationChargedHadrCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record404 (
+case class Record401 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record403 (
-    patTaus_slimmedTaus__RECO_obj_isolationNeutralHadrCandPtrs__core_ : Record404,
+case class Record400 (
+    patTaus_slimmedTaus__RECO_obj_isolationNeutralHadrCandPtrs__core_ : Record401,
     patTaus_slimmedTaus__RECO_obj_isolationNeutralHadrCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record406 (
+case class Record403 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record405 (
-    patTaus_slimmedTaus__RECO_obj_isolationGammaCandPtrs__core_ : Record406,
+case class Record402 (
+    patTaus_slimmedTaus__RECO_obj_isolationGammaCandPtrs__core_ : Record403,
     patTaus_slimmedTaus__RECO_obj_isolationGammaCandPtrs__indicies_ : Seq[Long]
 )
 
 
-case class Record409 (
+case class Record406 (
     fPt : Float,
     fEta : Float,
     fPhi : Float,
     fM : Float
+)
+
+
+case class Record405 (
+    fCoordinates : Record406
 )
 
 
 case class Record408 (
-    fCoordinates : Record409
-)
-
-
-case class Record411 (
     fPt : Float,
     fEta : Float,
     fPhi : Float,
@@ -3145,120 +3133,120 @@ case class Record411 (
 )
 
 
-case class Record410 (
-    fCoordinates : Record411
+case class Record407 (
+    fCoordinates : Record408
 )
 
 
-case class Record413 (
+case class Record410 (
     fX : Float,
     fY : Float,
     fZ : Float
+)
+
+
+case class Record409 (
+    fCoordinates : Record410
 )
 
 
 case class Record412 (
-    fCoordinates : Record413
-)
-
-
-case class Record415 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
+)
+
+
+case class Record411 (
+    product_ : Record412
 )
 
 
 case class Record414 (
-    product_ : Record415
-)
-
-
-case class Record417 (
     fX : Float,
     fY : Float,
     fZ : Float
+)
+
+
+case class Record413 (
+    fCoordinates : Record414
 )
 
 
 case class Record416 (
-    fCoordinates : Record417
-)
-
-
-case class Record419 (
     fArray : Seq[Float]
 )
 
 
-case class Record418 (
-    fRep : Record419
+case class Record415 (
+    fRep : Record416
 )
 
 
-case class Record421 (
+case class Record418 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record420 (
-    fCoordinates : Record421
+case class Record417 (
+    fCoordinates : Record418
 )
 
 
-case class Record423 (
+case class Record420 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record422 (
-    product_ : Record423
+case class Record419 (
+    product_ : Record420
 )
 
 
-case class Record425 (
+case class Record422 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record424 (
-    fCoordinates : Record425
+case class Record421 (
+    fCoordinates : Record422
 )
 
 
-case class Record427 (
+case class Record424 (
     fArray : Seq[Float]
 )
 
 
-case class Record426 (
-    fRep : Record427
+case class Record423 (
+    fRep : Record424
 )
 
 
-case class Record407 (
-    p4Jet_ : Record408,
-    p4CorrJet_ : Record410,
+case class Record404 (
+    p4Jet_ : Record405,
+    p4CorrJet_ : Record407,
     decayMode_ : Int,
-    dxy_PCA_ : Record412,
+    dxy_PCA_ : Record409,
     dxy_ : Float,
     dxy_error_ : Float,
     dxy_Sig_ : Float,
-    pv_ : Record414,
-    pvPos_ : Record416,
-    pvCov_ : Record418,
+    pv_ : Record411,
+    pvPos_ : Record413,
+    pvCov_ : Record415,
     hasSV_ : Boolean,
-    flightLength_ : Record420,
+    flightLength_ : Record417,
     flightLengthSig_ : Float,
-    sv_ : Record422,
-    svPos_ : Record424,
-    svCov_ : Record426,
+    sv_ : Record419,
+    svPos_ : Record421,
+    svCov_ : Record423,
     ip3d_ : Float,
     ip3d_error_ : Float,
     ecalEnergy_ : Float,
@@ -3274,33 +3262,33 @@ case class Record407 (
 )
 
 
-case class Record342 (
-    m_state : Record343,
-    alternatLorentzVect_ : Record348,
-    leadTrack_ : Record350,
-    signalTracks_ : Record352,
-    isolationTracks_ : Record355,
-    refToOrig_ : Record358,
+case class Record339 (
+    m_state : Record340,
+    alternatLorentzVect_ : Record345,
+    leadTrack_ : Record347,
+    signalTracks_ : Record349,
+    isolationTracks_ : Record352,
+    refToOrig_ : Record355,
     patTaus_slimmedTaus__RECO_obj_efficiencyNames_ : Seq[String],
     patTaus_slimmedTaus__RECO_obj_overlapLabels_ : Seq[String],
-    patTaus_slimmedTaus__RECO_obj_overlapItems_ : Seq[Record360],
+    patTaus_slimmedTaus__RECO_obj_overlapItems_ : Seq[Record357],
     patTaus_slimmedTaus__RECO_obj_userDataLabels_ : Seq[String],
     patTaus_slimmedTaus__RECO_obj_userFloatLabels_ : Seq[String],
     patTaus_slimmedTaus__RECO_obj_userFloats_ : Seq[Float],
     patTaus_slimmedTaus__RECO_obj_userIntLabels_ : Seq[String],
     patTaus_slimmedTaus__RECO_obj_userInts_ : Seq[Int],
     patTaus_slimmedTaus__RECO_obj_userCandLabels_ : Seq[String],
-    patTaus_slimmedTaus__RECO_obj_userCands_ : Seq[Record363],
+    patTaus_slimmedTaus__RECO_obj_userCands_ : Seq[Record360],
     patTaus_slimmedTaus__RECO_obj_kinResolutionLabels_ : Seq[String],
-    patTaus_slimmedTaus__RECO_obj_isoDeposits_ : Seq[Record365],
+    patTaus_slimmedTaus__RECO_obj_isoDeposits_ : Seq[Record362],
     patTaus_slimmedTaus__RECO_obj_isolations_ : Seq[Float],
-    miniPFIsolation_ : Record366,
+    miniPFIsolation_ : Record363,
     embeddedIsolationTracks_ : Boolean,
-    patTaus_slimmedTaus__RECO_obj_isolationTracks_ : Seq[Record367],
+    patTaus_slimmedTaus__RECO_obj_isolationTracks_ : Seq[Record364],
     embeddedLeadTrack_ : Boolean,
-    patTaus_slimmedTaus__RECO_obj_leadTrack_ : Seq[Record376],
+    patTaus_slimmedTaus__RECO_obj_leadTrack_ : Seq[Record373],
     embeddedSignalTracks_ : Boolean,
-    patTaus_slimmedTaus__RECO_obj_signalTracks_ : Seq[Record385],
+    patTaus_slimmedTaus__RECO_obj_signalTracks_ : Seq[Record382],
     embeddedLeadPFCand_ : Boolean,
     embeddedLeadPFChargedHadrCand_ : Boolean,
     embeddedLeadPFNeutralCand_ : Boolean,
@@ -3312,38 +3300,32 @@ case class Record342 (
     embeddedIsolationPFChargedHadrCands_ : Boolean,
     embeddedIsolationPFNeutralHadrCands_ : Boolean,
     embeddedIsolationPFGammaCands_ : Boolean,
-    patTaus_slimmedTaus__RECO_obj_tauIDs_ : Seq[Record394],
+    patTaus_slimmedTaus__RECO_obj_tauIDs_ : Seq[Record391],
     currentJECSet_ : Int,
     currentJECLevel_ : Int,
-    signalChargedHadrCandPtrs_ : Record395,
-    signalNeutralHadrCandPtrs_ : Record397,
-    signalGammaCandPtrs_ : Record399,
-    isolationChargedHadrCandPtrs_ : Record401,
-    isolationNeutralHadrCandPtrs_ : Record403,
-    isolationGammaCandPtrs_ : Record405,
-    patTaus_slimmedTaus__RECO_obj_pfEssential_ : Seq[Record407]
+    signalChargedHadrCandPtrs_ : Record392,
+    signalNeutralHadrCandPtrs_ : Record394,
+    signalGammaCandPtrs_ : Record396,
+    isolationChargedHadrCandPtrs_ : Record398,
+    isolationNeutralHadrCandPtrs_ : Record400,
+    isolationGammaCandPtrs_ : Record402,
+    patTaus_slimmedTaus__RECO_obj_pfEssential_ : Seq[Record404]
 )
 
 
-case class Record341 (
-    present : Boolean,
-    patTaus_slimmedTaus__RECO_obj : Seq[Record342]
-)
-
-
-case class Record431 (
+case class Record427 (
     fX : Double,
     fY : Double,
     fZ : Double
 )
 
 
-case class Record430 (
-    fCoordinates : Record431
+case class Record426 (
+    fCoordinates : Record427
 )
 
 
-case class Record434 (
+case class Record430 (
     hitPattern : Seq[Short],
     hitCount : Byte,
     beginTrackHits : Byte,
@@ -3355,36 +3337,36 @@ case class Record434 (
 )
 
 
-case class Record436 (
+case class Record432 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record435 (
-    fCoordinates : Record436
+case class Record431 (
+    fCoordinates : Record432
 )
 
 
-case class Record438 (
+case class Record434 (
     fX : Float,
     fY : Float,
     fZ : Float
-)
-
-
-case class Record437 (
-    fCoordinates : Record438
 )
 
 
 case class Record433 (
-    hitPattern_ : Record434,
+    fCoordinates : Record434
+)
+
+
+case class Record429 (
+    hitPattern_ : Record430,
     covariance_ : Seq[Float],
     chi2_ : Float,
-    vertex_ : Record435,
-    momentum_ : Record437,
+    vertex_ : Record431,
+    momentum_ : Record433,
     algoMask_ : Seq[Boolean],
     ndof_ : Float,
     charge_ : Byte,
@@ -3396,67 +3378,61 @@ case class Record433 (
 )
 
 
-case class Record440 (
+case class Record436 (
     processIndex_ : Short,
     productIndex_ : Short,
     elementIndex_ : Int
 )
 
 
-case class Record439 (
-    product_ : Record440
+case class Record435 (
+    product_ : Record436
 )
 
 
-case class Record432 (
-    reco__TrackBase : Record433,
-    extra_ : Record439
+case class Record428 (
+    reco__TrackBase : Record429,
+    extra_ : Record435
 )
 
 
-case class Record429 (
+case class Record425 (
     chi2_ : Float,
     ndof_ : Float,
-    position_ : Record430,
+    position_ : Record426,
     covariance_ : Seq[Float],
-    recoVertexs_offlineSlimmedPrimaryVertices__RECO_obj_refittedTracks_ : Seq[Record432],
+    recoVertexs_offlineSlimmedPrimaryVertices__RECO_obj_refittedTracks_ : Seq[Record428],
     recoVertexs_offlineSlimmedPrimaryVertices__RECO_obj_weights_ : Seq[Byte],
     validity_ : Boolean,
     time_ : Double
 )
 
 
-case class Record428 (
-    present : Boolean,
-    recoVertexs_offlineSlimmedPrimaryVertices__RECO_obj : Seq[Record429]
-)
-
-
-case class Record444 (
+case class Record439 (
     fX : Double,
     fY : Double,
     fZ : Double
 )
 
 
-case class Record443 (
-    fCoordinates : Record444
+case class Record438 (
+    fCoordinates : Record439
 )
 
 
-case class Record446 (
+case class Record441 (
     fArray : Seq[Double]
 )
 
 
-case class Record445 (
-    fRep : Record446
+case class Record440 (
+    fRep : Record441
 )
 
 
-case class Record442 (
-    position_ : Record443,
-    error_ : Record445,
+case class Record437 (
+    position_ : Record438,
+    error_ : Record440,
     sigmaZ_ : Float,
     BeamWidthX_ : Float,
     BeamWidthY_ : Float,
@@ -3469,37 +3445,78 @@ case class Record442 (
 )
 
 
-case class Record441 (
-    present : Boolean,
-    recoBeamSpot_offlineBeamSpot__RECO_obj : Record442
-)
-
-
-case class Record450 (
+case class Record444 (
     status_ : Short
 )
 
 
-case class Record449 (
-    paths_ : Seq[Record450]
+case class Record443 (
+    paths_ : Seq[Record444]
 )
 
 
-case class Record451 (
+case class Record445 (
     hash_ : String
 )
 
 
-case class Record448 (
-    edm__HLTGlobalStatus : Record449,
-    psetid_ : Record451,
+case class Record442 (
+    edm__HLTGlobalStatus : Record443,
+    psetid_ : Record445,
     names_ : Seq[String]
 )
 
 
+case class Record449 (
+    fX : Float,
+    fY : Float,
+    fZ : Float
+)
+
+
+case class Record448 (
+    fCoordinates : Record449
+)
+
+
+case class Record451 (
+    fPt : Float,
+    fEta : Float,
+    fPhi : Float,
+    fM : Float
+)
+
+
+case class Record450 (
+    fCoordinates : Record451
+)
+
+
 case class Record447 (
-    present : Boolean,
-    edmTriggerResults_TriggerResults__HLT_obj : Record448
+    vertex_ : Record448,
+    p4Polar_ : Record450,
+    qx3_ : Int,
+    pdgId_ : Int,
+    status_ : Int
+)
+
+
+case class Record452 (
+    hash_ : String
+)
+
+
+case class Record446 (
+    m_state : Record447,
+    collection_ : String,
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_triggerObjectTypes_ : Seq[Int],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_filterLabels_ : Seq[String],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_filterLabelIndices_ : Seq[Short],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathNames_ : Seq[String],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathIndices_ : Seq[Short],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathLastFilterAccepted_ : Seq[Boolean],
+    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathL3FilterAccepted_ : Seq[Boolean],
+    psetId_ : Record452
 )
 
 
@@ -3537,107 +3554,48 @@ case class Record454 (
 )
 
 
+case class Record460 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
 case class Record459 (
-    hash_ : String
-)
-
-
-case class Record453 (
-    m_state : Record454,
-    collection_ : String,
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_triggerObjectTypes_ : Seq[Int],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_filterLabels_ : Seq[String],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_filterLabelIndices_ : Seq[Short],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathNames_ : Seq[String],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathIndices_ : Seq[Short],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathLastFilterAccepted_ : Seq[Boolean],
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj_pathL3FilterAccepted_ : Seq[Boolean],
-    psetId_ : Record459
-)
-
-
-case class Record452 (
-    present : Boolean,
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj : Seq[Record453]
-)
-
-
-case class Record464 (
-    fX : Float,
-    fY : Float,
-    fZ : Float
+    patMETs_slimmedMETs__RECO_obj_refToOrig__core_ : Record460,
+    key_ : Long
 )
 
 
 case class Record463 (
-    fCoordinates : Record464
-)
-
-
-case class Record466 (
-    fPt : Float,
-    fEta : Float,
-    fPhi : Float,
-    fM : Float
-)
-
-
-case class Record465 (
-    fCoordinates : Record466
+    processIndex_ : Short,
+    productIndex_ : Short
 )
 
 
 case class Record462 (
-    vertex_ : Record463,
-    p4Polar_ : Record465,
-    qx3_ : Int,
-    pdgId_ : Int,
-    status_ : Int
-)
-
-
-case class Record468 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record467 (
-    patMETs_slimmedMETs__RECO_obj_refToOrig__core_ : Record468,
-    key_ : Long
-)
-
-
-case class Record471 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record470 (
-    core_ : Record471,
+    core_ : Record463,
     indicies_ : Seq[Long]
 )
 
 
-case class Record469 (
-    edm__PtrVectorBase : Record470
+case class Record461 (
+    edm__PtrVectorBase : Record462
 )
 
 
-case class Record473 (
+case class Record465 (
     processIndex_ : Short,
     productIndex_ : Short
 )
 
 
-case class Record472 (
-    core_ : Record473,
+case class Record464 (
+    core_ : Record465,
     key_ : Long
 )
 
 
-case class Record474 (
+case class Record466 (
     NeutralEMFraction : Float,
     NeutralHadFraction : Float,
     ChargedEMFraction : Float,
@@ -3648,98 +3606,92 @@ case class Record474 (
 )
 
 
-case class Record475 (
+case class Record467 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record476 (
+case class Record468 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record477 (
+case class Record469 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record478 (
+case class Record470 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record479 (
+case class Record471 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record480 (
+case class Record472 (
     packedDpx_ : Short,
     packedDpy_ : Short,
     packedDSumEt_ : Short
 )
 
 
-case class Record461 (
-    m_state : Record462,
+case class Record453 (
+    m_state : Record454,
     sumet : Double,
     elongit : Double,
     signif_dxx : Double,
     signif_dyy : Double,
     signif_dyx : Double,
     signif_dxy : Double,
-    refToOrig_ : Record467,
+    refToOrig_ : Record459,
     patMETs_slimmedMETs__RECO_obj_efficiencyNames_ : Seq[String],
     patMETs_slimmedMETs__RECO_obj_overlapLabels_ : Seq[String],
-    patMETs_slimmedMETs__RECO_obj_overlapItems_ : Seq[Record469],
+    patMETs_slimmedMETs__RECO_obj_overlapItems_ : Seq[Record461],
     patMETs_slimmedMETs__RECO_obj_userDataLabels_ : Seq[String],
     patMETs_slimmedMETs__RECO_obj_userFloatLabels_ : Seq[String],
     patMETs_slimmedMETs__RECO_obj_userFloats_ : Seq[Float],
     patMETs_slimmedMETs__RECO_obj_userIntLabels_ : Seq[String],
     patMETs_slimmedMETs__RECO_obj_userInts_ : Seq[Int],
     patMETs_slimmedMETs__RECO_obj_userCandLabels_ : Seq[String],
-    patMETs_slimmedMETs__RECO_obj_userCands_ : Seq[Record472],
+    patMETs_slimmedMETs__RECO_obj_userCands_ : Seq[Record464],
     patMETs_slimmedMETs__RECO_obj_kinResolutionLabels_ : Seq[String],
-    patMETs_slimmedMETs__RECO_obj_pfMET_ : Seq[Record474],
+    patMETs_slimmedMETs__RECO_obj_pfMET_ : Seq[Record466],
     metSig_ : Double,
-    patMETs_slimmedMETs__RECO_obj_uncertaintiesRaw_ : Seq[Record475],
-    patMETs_slimmedMETs__RECO_obj_uncertaintiesType1_ : Seq[Record476],
-    patMETs_slimmedMETs__RECO_obj_uncertaintiesType1p2_ : Seq[Record477],
-    patMETs_slimmedMETs__RECO_obj_uncertainties_ : Seq[Record478],
-    patMETs_slimmedMETs__RECO_obj_corrections_ : Seq[Record479],
-    caloPackedMet_ : Record480
+    patMETs_slimmedMETs__RECO_obj_uncertaintiesRaw_ : Seq[Record467],
+    patMETs_slimmedMETs__RECO_obj_uncertaintiesType1_ : Seq[Record468],
+    patMETs_slimmedMETs__RECO_obj_uncertaintiesType1p2_ : Seq[Record469],
+    patMETs_slimmedMETs__RECO_obj_uncertainties_ : Seq[Record470],
+    patMETs_slimmedMETs__RECO_obj_corrections_ : Seq[Record471],
+    caloPackedMet_ : Record472
 )
 
 
-case class Record460 (
-    present : Boolean,
-    patMETs_slimmedMETs__RECO_obj : Seq[Record461]
-)
-
-
-case class Record485 (
+case class Record476 (
     fX : Float,
     fY : Float,
     fZ : Float
 )
 
 
-case class Record484 (
-    fCoordinates : Record485
+case class Record475 (
+    fCoordinates : Record476
 )
 
 
-case class Record487 (
+case class Record478 (
     fPt : Float,
     fEta : Float,
     fPhi : Float,
@@ -3747,17 +3699,70 @@ case class Record487 (
 )
 
 
-case class Record486 (
-    fCoordinates : Record487
+case class Record477 (
+    fCoordinates : Record478
+)
+
+
+case class Record474 (
+    vertex_ : Record475,
+    p4Polar_ : Record477,
+    qx3_ : Int,
+    pdgId_ : Int,
+    status_ : Int
+)
+
+
+case class Record480 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record479 (
+    core_ : Record480,
+    key_ : Long
+)
+
+
+case class Record482 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record481 (
+    patJets_slimmedJets__RECO_obj_refToOrig__core_ : Record482,
+    key_ : Long
+)
+
+
+case class Record485 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record484 (
+    core_ : Record485,
+    indicies_ : Seq[Long]
 )
 
 
 case class Record483 (
-    vertex_ : Record484,
-    p4Polar_ : Record486,
-    qx3_ : Int,
-    pdgId_ : Int,
-    status_ : Int
+    edm__PtrVectorBase : Record484
+)
+
+
+case class Record487 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record486 (
+    core_ : Record487,
+    key_ : Long
 )
 
 
@@ -3773,56 +3778,50 @@ case class Record488 (
 )
 
 
-case class Record491 (
+case class Record492 (
     processIndex_ : Short,
     productIndex_ : Short
+)
+
+
+case class Record491 (
+    patJets_slimmedJets__RECO_obj_genJetRef__refVector__product_ : Record492,
+    patJets_slimmedJets__RECO_obj_genJetRef__refVector__keys_ : Seq[Int]
 )
 
 
 case class Record490 (
-    patJets_slimmedJets__RECO_obj_refToOrig__core_ : Record491,
-    key_ : Long
-)
-
-
-case class Record494 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record493 (
-    core_ : Record494,
-    indicies_ : Seq[Long]
-)
-
-
-case class Record492 (
-    edm__PtrVectorBase : Record493
-)
-
-
-case class Record496 (
-    processIndex_ : Short,
-    productIndex_ : Short
+    refVector_ : Record491
 )
 
 
 case class Record495 (
-    core_ : Record496,
-    key_ : Long
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
 )
 
 
-case class Record498 (
-    processIndex_ : Short,
-    productIndex_ : Short
+case class Record494 (
+    patJets_slimmedJets__RECO_obj_genJetFwdRef__ref__product_ : Record495
 )
 
 
 case class Record497 (
-    core_ : Record498,
-    key_ : Long
+    processIndex_ : Short,
+    productIndex_ : Short,
+    elementIndex_ : Int
+)
+
+
+case class Record496 (
+    patJets_slimmedJets__RECO_obj_genJetFwdRef__backRef__product_ : Record497
+)
+
+
+case class Record493 (
+    ref_ : Record494,
+    backRef_ : Record496
 )
 
 
@@ -3833,8 +3832,8 @@ case class Record501 (
 
 
 case class Record500 (
-    patJets_slimmedJets__RECO_obj_genJetRef__refVector__product_ : Record501,
-    patJets_slimmedJets__RECO_obj_genJetRef__refVector__keys_ : Seq[Int]
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_bHadrons_refVector__product_ : Record501,
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_bHadrons_refVector__keys_ : Seq[Int]
 )
 
 
@@ -3845,31 +3844,35 @@ case class Record499 (
 
 case class Record504 (
     processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
+    productIndex_ : Short
 )
 
 
 case class Record503 (
-    patJets_slimmedJets__RECO_obj_genJetFwdRef__ref__product_ : Record504
-)
-
-
-case class Record506 (
-    processIndex_ : Short,
-    productIndex_ : Short,
-    elementIndex_ : Int
-)
-
-
-case class Record505 (
-    patJets_slimmedJets__RECO_obj_genJetFwdRef__backRef__product_ : Record506
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_cHadrons_refVector__product_ : Record504,
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_cHadrons_refVector__keys_ : Seq[Int]
 )
 
 
 case class Record502 (
-    ref_ : Record503,
-    backRef_ : Record505
+    refVector_ : Record503
+)
+
+
+case class Record507 (
+    processIndex_ : Short,
+    productIndex_ : Short
+)
+
+
+case class Record506 (
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_partons_refVector__product_ : Record507,
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_partons_refVector__keys_ : Seq[Int]
+)
+
+
+case class Record505 (
+    refVector_ : Record506
 )
 
 
@@ -3880,8 +3883,8 @@ case class Record510 (
 
 
 case class Record509 (
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_bHadrons_refVector__product_ : Record510,
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_bHadrons_refVector__keys_ : Seq[Int]
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_leptons_refVector__product_ : Record510,
+    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_leptons_refVector__keys_ : Seq[Int]
 )
 
 
@@ -3890,20 +3893,31 @@ case class Record508 (
 )
 
 
-case class Record513 (
-    processIndex_ : Short,
-    productIndex_ : Short
+case class Record498 (
+    m_bHadrons : Record499,
+    m_cHadrons : Record502,
+    m_partons : Record505,
+    m_leptons : Record508,
+    m_hadronFlavour : Int,
+    m_partonFlavour : Int
 )
 
 
 case class Record512 (
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_cHadrons_refVector__product_ : Record513,
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_cHadrons_refVector__keys_ : Seq[Int]
+    first : String,
+    second : Seq[Float]
 )
 
 
 case class Record511 (
-    refVector_ : Record512
+    label_ : String,
+    jec_ : Seq[Record512]
+)
+
+
+case class Record513 (
+    first : String,
+    second : Float
 )
 
 
@@ -3914,8 +3928,8 @@ case class Record516 (
 
 
 case class Record515 (
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_partons_refVector__product_ : Record516,
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_partons_refVector__keys_ : Seq[Int]
+    patJets_slimmedJets__RECO_obj_associatedTracks__refVector__product_ : Record516,
+    patJets_slimmedJets__RECO_obj_associatedTracks__refVector__keys_ : Seq[Int]
 )
 
 
@@ -3924,69 +3938,7 @@ case class Record514 (
 )
 
 
-case class Record519 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record518 (
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_leptons_refVector__product_ : Record519,
-    patJets_slimmedJets__RECO_obj_jetFlavourInfo__m_leptons_refVector__keys_ : Seq[Int]
-)
-
-
 case class Record517 (
-    refVector_ : Record518
-)
-
-
-case class Record507 (
-    m_bHadrons : Record508,
-    m_cHadrons : Record511,
-    m_partons : Record514,
-    m_leptons : Record517,
-    m_hadronFlavour : Int,
-    m_partonFlavour : Int
-)
-
-
-case class Record521 (
-    first : String,
-    second : Seq[Float]
-)
-
-
-case class Record520 (
-    label_ : String,
-    jec_ : Seq[Record521]
-)
-
-
-case class Record522 (
-    first : String,
-    second : Float
-)
-
-
-case class Record525 (
-    processIndex_ : Short,
-    productIndex_ : Short
-)
-
-
-case class Record524 (
-    patJets_slimmedJets__RECO_obj_associatedTracks__refVector__product_ : Record525,
-    patJets_slimmedJets__RECO_obj_associatedTracks__refVector__keys_ : Seq[Int]
-)
-
-
-case class Record523 (
-    refVector_ : Record524
-)
-
-
-case class Record526 (
     mChargedHadronEnergy : Float,
     mNeutralHadronEnergy : Float,
     mPhotonEnergy : Float,
@@ -4010,7 +3962,7 @@ case class Record526 (
 )
 
 
-case class Record527 (
+case class Record518 (
     fHPD : Float,
     fRBX : Float,
     n90Hits : Short,
@@ -4039,59 +3991,64 @@ case class Record527 (
 )
 
 
-case class Record482 (
-    m_state : Record483,
-    patJets_slimmedJets__RECO_obj_dau : Seq[Record488],
+case class Record473 (
+    m_state : Record474,
+    patJets_slimmedJets__RECO_obj_dau : Seq[Record479],
     mJetArea : Float,
     mPileupEnergy : Float,
     mPassNumber : Int,
-    refToOrig_ : Record490,
+    refToOrig_ : Record481,
     patJets_slimmedJets__RECO_obj_efficiencyNames_ : Seq[String],
     patJets_slimmedJets__RECO_obj_overlapLabels_ : Seq[String],
-    patJets_slimmedJets__RECO_obj_overlapItems_ : Seq[Record492],
+    patJets_slimmedJets__RECO_obj_overlapItems_ : Seq[Record483],
     patJets_slimmedJets__RECO_obj_userDataLabels_ : Seq[String],
     patJets_slimmedJets__RECO_obj_userFloatLabels_ : Seq[String],
     patJets_slimmedJets__RECO_obj_userFloats_ : Seq[Float],
     patJets_slimmedJets__RECO_obj_userIntLabels_ : Seq[String],
     patJets_slimmedJets__RECO_obj_userInts_ : Seq[Int],
     patJets_slimmedJets__RECO_obj_userCandLabels_ : Seq[String],
-    patJets_slimmedJets__RECO_obj_userCands_ : Seq[Record495],
+    patJets_slimmedJets__RECO_obj_userCands_ : Seq[Record486],
     patJets_slimmedJets__RECO_obj_kinResolutionLabels_ : Seq[String],
     embeddedCaloTowers_ : Boolean,
     embeddedPFCandidates_ : Boolean,
-    patJets_slimmedJets__RECO_obj_subjetCollections_ : Seq[Seq[Record497]],
+    patJets_slimmedJets__RECO_obj_subjetCollections_ : Seq[Seq[Record488]],
     patJets_slimmedJets__RECO_obj_subjetLabels_ : Seq[String],
-    genJetRef_ : Record499,
-    genJetFwdRef_ : Record502,
-    jetFlavourInfo_ : Record507,
-    patJets_slimmedJets__RECO_obj_jec_ : Seq[Record520],
+    genJetRef_ : Record490,
+    genJetFwdRef_ : Record493,
+    jetFlavourInfo_ : Record498,
+    patJets_slimmedJets__RECO_obj_jec_ : Seq[Record511],
     currentJECSet_ : Int,
     currentJECLevel_ : Int,
     currentJECFlavor_ : Int,
-    patJets_slimmedJets__RECO_obj_pairDiscriVector_ : Seq[Record522],
+    patJets_slimmedJets__RECO_obj_pairDiscriVector_ : Seq[Record513],
     patJets_slimmedJets__RECO_obj_tagInfoLabels_ : Seq[String],
     jetCharge_ : Float,
-    associatedTracks_ : Record523,
-    patJets_slimmedJets__RECO_obj_specificPF_ : Seq[Record526],
-    jetID_ : Record527
-)
-
-
-case class Record481 (
-    present : Boolean,
-    patJets_slimmedJets__RECO_obj : Seq[Record482]
+    associatedTracks_ : Record514,
+    patJets_slimmedJets__RECO_obj_specificPF_ : Seq[Record517],
+    jetID_ : Record518
 )
 
 
 case class Event (
-    patMuons_slimmedMuons__RECO_ : Record0,
-    patElectrons_slimmedElectrons__RECO_ : Record163,
-    patTaus_slimmedTaus__RECO_ : Record341,
-    recoVertexs_offlineSlimmedPrimaryVertices__RECO_ : Record428,
-    recoBeamSpot_offlineBeamSpot__RECO_ : Record441,
-    edmTriggerResults_TriggerResults__HLT_ : Record447,
-    patTriggerObjectStandAlones_selectedPatTrigger__RECO_ : Record452,
-    patMETs_slimmedMETs__RECO_ : Record460,
-    patJets_slimmedJets__RECO_ : Record481
+    cmsMuons : Seq[Record0],
+    cmsElectrons : Seq[Record162],
+    cmsTaus : Seq[Record339],
+    cmsVertices : Seq[Record425],
+    cmsBS : Record437,
+    cmsTriggerResults : Record442,
+    cmsTriggerObjects : Seq[Record446],
+    cmsMET : Seq[Record453],
+    cmsJets : Seq[Record473]
 )
 
+case class EventWithMuonPairs (
+    muonPairs: Seq[(Record0, Record0)],
+    cmsElectrons : Seq[Record162],
+    cmsTaus : Seq[Record339],
+    cmsVertices : Seq[Record425],
+    cmsBS : Record437,
+    cmsTriggerResults : Record442,
+    cmsTriggerObjects : Seq[Record446],
+    cmsMET : Seq[Record453],
+    cmsJets : Seq[Record473]
+)

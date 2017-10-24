@@ -10,6 +10,9 @@ import org.apache.spark.sql.Dataset
 // spark-root import
 import org.dianahep.sparkroot.experimental._
 
+// import the generated case classes
+import org.dianahep.h2mumu.apps.analysis._
+
 object ReductionApp {
   def main(args: Array[String]) {
     // simple syntax key=v1,v2,v3
@@ -20,16 +23,16 @@ object ReductionApp {
     }
 
     // top columns that are to be selected
-    val requiredColumns = Seq(
-      "patMuons_slimmedMuons__RECO_",
-      "patElectrons_slimmedElectrons__RECO_",
-      "patTaus_slimmedTaus__RECO_",
-      "recoVertexs_offlineSlimmedPrimaryVertices__RECO_",
-      "recoBeamSpot_offlineBeamSpot__RECO_",
-      "edmTriggerResults_TriggerResults__HLT_",
-      "patTriggerObjectStandAlones_selectedPatTrigger__RECO_",
-      "patMETs_slimmedMETs__RECO_",
-      "patJets_slimmedJets__RECO_"
+    val requiredColumns = Map(
+      "cmsMuons" -> "patMuons_slimmedMuons__RECO_.patMuons_slimmedMuons__RECO_obj",
+      "cmsElectrons" -> "patElectrons_slimmedElectrons__RECO_.patElectrons_slimmedElectrons__RECO_obj",
+      "cmsTaus" -> "patTaus_slimmedTaus__RECO_.patTaus_slimmedTaus__RECO_obj",
+      "cmsVertices" -> "recoVertexs_offlineSlimmedPrimaryVertices__RECO_.recoVertexs_offlineSlimmedPrimaryVertices__RECO_obj",
+      "cmsBS" -> "recoBeamSpot_offlineBeamSpot__RECO_.recoBeamSpot_offlineBeamSpot__RECO_obj",
+      "cmsTriggerResults" -> "edmTriggerResults_TriggerResults__HLT_.edmTriggerResults_TriggerResults__HLT_obj",
+      "cmsTriggerObjects" -> "patTriggerObjectStandAlones_selectedPatTrigger__RECO_.patTriggerObjectStandAlones_selectedPatTrigger__RECO_obj",
+      "cmsMET" -> "patMETs_slimmedMETs__RECO_.patMETs_slimmedMETs__RECO_obj",
+      "cmsJets" -> "patJets_slimmedJets__RECO_.patJets_slimmedJets__RECO_obj"
     )
 
     // options for reading
@@ -49,8 +52,13 @@ object ReductionApp {
     val numRows = df.count
     println(s"Total Number of Rows/Events: ${numRows}")
 
-    // start
+    // create a ds with only required columns selected
+    val colNames = requiredColumns.values.toSeq
+    val futNames = requiredColumns.keys.toSeq
+    val ds = df.select(colNames.head, colNames.tail:_*).toDF(futNames:_*).as[Event]
 
+    // perform baseline event selections: vertex and muons
+    val events = ds.passVertex.atLeast2Muons
 
     // save as parquet
     val output = options.get("output") match {
